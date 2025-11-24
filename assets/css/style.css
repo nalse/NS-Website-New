@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 50px;
+}
+.header-container .logo-container {
+  cursor: pointer;
+}
+.header-container .header-navs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header-container .header-navs a {
+  padding: 12px;
+  color: #000;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.logo-container {
+  padding: 12px 0;
+  font-weight: 900;
+}
+
+.hover-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 6px;
+  padding: 12px;
+  background-color: #000;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease, transform 0.15s ease;
+}
+.hover-button:active {
+  transform: scale(0.97);
+}
+.hover-button .circle {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background-color: #ffffff;
+  transform: translateY(-50%);
+  transform-origin: center;
+  z-index: 1;
+  transition: transform 1s ease;
+}
+.hover-button .label {
+  position: relative;
+  z-index: 9;
+  margin-left: 24px;
+}
+.hover-button img {
+  width: 24px;
+  margin-left: 8px;
+  opacity: 0;
+  transform: translateX(12px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.hover-button.is-animating {
+  color: #000;
+  background-color: #fff;
+}
+.hover-button.is-animating .circle {
+  transform: translateY(-50%) scale(40);
+}
+.hover-button.is-animating img {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.homepage-container .hero-section .hero-top {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+}
+.homepage-container .hero-section .hero-top .hero-title {
+  display: flex;
+  position: relative;
+  margin-top: 100px;
+}
+.homepage-container .hero-section .hero-top .hero-title span {
+  font-size: 58px;
+  font-weight: 600;
+}
+.homepage-container .hero-section .hero-top .hero-title img {
+  width: 70px;
+  height: 80px;
+  position: absolute;
+  bottom: -15px;
+  left: 385px;
+}
+.homepage-container .hero-section .hero-top .hero-description {
+  margin-top: 16px;
+  font-size: 16px;
+}
+.homepage-container .hero-section .hero-top .hover-button {
+  margin-top: 32px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.homepage-container .hero-section .hero-video-div {
+  height: 700px;
+}
+.homepage-container .hero-section .hero-video-div .hero-video {
+  width: 100%;
+  height: 700px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=style.css.map */
