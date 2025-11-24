@@ -7,31 +7,97 @@
             flex-direction: column;
             padding: 50px;
 
-            .hero-title {
-                display: flex;
-                position: relative;
-                margin-top: 100px;
+            // .hero-title {
+            //     display: flex;
+            //     position: relative;
+            //     margin-top: 100px;
 
-                span {
-                    font-size: 58px;
-                    font-weight: 600;
+            //     span {
+            //         font-size: 58px;
+            //         font-weight: 600;
+            //     }
+
+            //     img {
+            //         width: 70px;
+            //         height: 80px;
+            //         position: absolute;
+            //         bottom: -15px;
+            //         left: 385px;
+            //     }
+            // }
+
+            // .hero-title {
+            //     display: inline-flex;
+            //     flex-direction: column;
+            //     gap: 4px;
+
+            //     &__line {
+            //         font-size: 64px;
+            //         font-weight: 700;
+            //         line-height: 1.1;
+
+            //         &.hero-title__line--1 {
+            //             --animate-delay: 0s;
+            //         }
+
+            //         &.hero-title__line--2 {
+            //             --animate-delay: 2s;
+            //         }
+
+            //         &.hero-title__line--3 {
+            //             --animate-delay: 3s;
+            //         }
+            //     }
+            // }
+
+            @keyframes heroLineIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(-30px);
                 }
 
-                img {
-                    width: 70px;
-                    height: 80px;
-                    position: absolute;
-                    bottom: -15px;
-                    left: 385px;
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
                 }
             }
-            
-            .hero-description{
+
+            .hero-title {
+
+                &__line {
+                    font-size: 64px;
+                    font-weight: 700;
+                    line-height: 1.1;
+
+                    opacity: 0;
+                    animation: heroLineIn 0.6s ease forwards;
+
+                    &--1 {
+                        animation-delay: 0s;
+                    }
+
+                    &--2 {
+                        animation-delay: 0.3s;
+                    }
+
+                    &--3 {
+                        animation-delay: 0.6s;
+                    }
+
+                    &--4 {
+                        animation-delay: 0.8s;
+                    }
+                }
+            }
+
+
+
+            .hero-description {
                 margin-top: 16px;
                 font-size: 16px;
             }
 
-            .hover-button{
+            .hover-button {
                 margin-top: 32px;
                 width: fit-content;
             }
