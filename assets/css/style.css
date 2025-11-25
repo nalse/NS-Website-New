@@ -414,7 +414,7 @@ body {
 .homepage-container .hero-section .hero-bottom .hero-bottom-title .word {
   opacity: 0;
   animation: fadeInWord 0.4s ease forwards;
-  animation-delay: calc(var(--word-index) * 0.1s);
+  animation-delay: calc(var(--word-index) * 0.2s);
 }
 .homepage-container .hero-section .hero-bottom .hero-bottom-title .brand-highlight {
   color: #83FAFC;
@@ -522,7 +522,7 @@ body {
 .homepage-container .our-partners .section-text .word {
   opacity: 0;
   animation: fadeInWord 0.4s ease forwards;
-  animation-delay: calc(var(--word-index) * 0.1s);
+  animation-delay: calc(var(--word-index) * 0.2s);
 }
 .homepage-container .our-partners .section-text .brand-highlight {
   color: #83FAFC;

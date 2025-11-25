@@ -91,7 +91,7 @@
                 .word {
                     opacity: 0;
                     animation: fadeInWord 0.4s ease forwards;
-                    animation-delay: calc(var(--word-index) * .1s);
+                    animation-delay: calc(var(--word-index) * 0.2s);
                 }
 
                 .brand-highlight {
@@ -220,7 +220,7 @@
             .word {
                 opacity: 0;
                 animation: fadeInWord 0.4s ease forwards;
-                animation-delay: calc(var(--word-index) * .1s);
+                animation-delay: calc(var(--word-index) * 0.2s);
             }
 
             .brand-highlight {

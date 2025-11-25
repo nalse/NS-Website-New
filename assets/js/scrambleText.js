@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function scrambleText(element, text, duration = 1200) {
-  const chars = '!@#$%^&*!@#$%^&';
+  const chars = '471047235829876';
   const frameDuration = 40;
   const totalFrames = Math.round(duration / frameDuration);
 
