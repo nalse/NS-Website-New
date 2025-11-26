@@ -245,7 +245,7 @@
             display: flex;
             flex-direction: column;
             gap: 42px;
-            
+
             .track {
                 display: inline-flex;
                 align-items: center;
@@ -267,6 +267,60 @@
         }
 
     }
+
+    .what-we-do {
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+
+        .section-body {
+            .what-we-do-cards {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+    }
+
+    .featured-blogs {
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .section-body {
+
+            .blog-cards {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 32px;
+            }
+        }
+    }
+
+    .frequently-asked-guestions {
+        padding: 70px 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 70px;
+        background-color: #000;
+
+        .section-header {
+            text-align: center;
+
+            .section-title {
+                color: #fff;
+            }
+        }
+    }
+
+
 
     @keyframes heroLineIn {
         from {

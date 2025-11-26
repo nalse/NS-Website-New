@@ -1,0 +1,132 @@
+.footer-container {
+    position: relative;
+    padding: 70px 50px;
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+
+    .dashed-box {
+        padding: 16px;
+        border: 1px dashed #5E5E5E;
+        width: fit-content;
+        position: relative;
+        height: fit-content;
+
+        &__corner {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border: 0.2px solid #E9E9E9;
+            background: #000;
+        }
+
+        &__corner--tl {
+            top: -10px;
+            left: -10px;
+        }
+
+        &__corner--tr {
+            top: -10px;
+            right: -10px;
+        }
+
+        &__corner--bl {
+            bottom: -10px;
+            left: -10px;
+        }
+
+        &__corner--br {
+            bottom: -10px;
+            right: -10px;
+        }
+
+        &__title {
+            display: flex;
+            position: relative;
+
+            span {
+                color: #FFF;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 550;
+                line-height: 120%;
+            }
+
+
+            .dot-img {
+                width: 150px;
+                height: 170px;
+                aspect-ratio: 25.00/25.31;
+                position: absolute;
+                left: 360px;
+                top: -20px;
+
+            }
+
+        }
+
+        &-description {
+            color: rgba(255, 255, 255, 0.70);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+    }
+
+    .footer-infos {
+        display: flex;
+        gap: 50px;
+
+        .info-div {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            .page-routes {
+                a {
+                    text-decoration: none;
+                }
+            }
+
+            .social-media-routes{
+                a{
+                    color: red;
+                }
+            }
+            
+
+            .title {
+                color: #FFF;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+            }
+
+            .infos {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+
+                .info {
+                    color: rgba(255, 255, 255, 0.70);
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+            }
+
+
+        }
+
+        .contact-infos {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+
+        }
+
+    }
+}

@@ -13,6 +13,9 @@
 @use './components/buttons/hoverButton';
 @use './components/cards/project-card';
 @use './components/cards/hover-accordion';
+@use './components/cards/what-we-do-card';
+@use './components/cards/blog-card';
+@use './components/cards/accordion';
 
 // pages
 @use './pages/index';

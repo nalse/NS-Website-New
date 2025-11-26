@@ -64,6 +64,111 @@ body {
   transform: translate(-50%, -50%);
 }
 
+.footer-container {
+  position: relative;
+  padding: 70px 50px;
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-container .dashed-box {
+  padding: 16px;
+  border: 1px dashed #5E5E5E;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.footer-container .dashed-box__corner {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 0.2px solid #E9E9E9;
+  background: #000;
+}
+.footer-container .dashed-box__corner--tl {
+  top: -10px;
+  left: -10px;
+}
+.footer-container .dashed-box__corner--tr {
+  top: -10px;
+  right: -10px;
+}
+.footer-container .dashed-box__corner--bl {
+  bottom: -10px;
+  left: -10px;
+}
+.footer-container .dashed-box__corner--br {
+  bottom: -10px;
+  right: -10px;
+}
+.footer-container .dashed-box__title {
+  display: flex;
+  position: relative;
+}
+.footer-container .dashed-box__title span {
+  color: #FFF;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 550;
+  line-height: 120%;
+}
+.footer-container .dashed-box__title .dot-img {
+  width: 150px;
+  height: 170px;
+  aspect-ratio: 25/25.31;
+  position: absolute;
+  left: 360px;
+  top: -20px;
+}
+.footer-container .dashed-box-description {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.footer-container .footer-infos {
+  display: flex;
+  gap: 50px;
+}
+.footer-container .footer-infos .info-div {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.footer-container .footer-infos .info-div .page-routes a {
+  text-decoration: none;
+}
+.footer-container .footer-infos .info-div .social-media-routes a {
+  color: red;
+}
+.footer-container .footer-infos .info-div .title {
+  color: #FFF;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.footer-container .footer-infos .info-div .infos {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.footer-container .footer-infos .info-div .infos .info {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.footer-container .footer-infos .contact-infos {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
 .logo-container {
   padding: 12px 0;
   font-weight: 900;
@@ -335,6 +440,162 @@ body {
   max-height: 130px;
 }
 
+.what-we-do-card {
+  padding: 24px;
+  border: 1px solid #E9E9E9;
+  background: #FFF;
+}
+.what-we-do-card .card-icon .corner-logo .corner {
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: scale(1);
+  animation: cornerPulse 3s ease-in-out infinite;
+}
+.what-we-do-card .card-icon .corner-logo .corner--tr {
+  animation-delay: 0s;
+}
+.what-we-do-card .card-icon .corner-logo .corner--bl {
+  animation-delay: 0.5s;
+}
+.what-we-do-card .card-icon .corner-logo .corner--br {
+  animation-delay: 1s;
+}
+.what-we-do-card .card-icon .corner-logo .corner--tl {
+  animation-delay: 1.5s;
+}
+.what-we-do-card .card-title {
+  margin-top: 16px;
+  color: #000;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 550;
+  line-height: 120%;
+}
+.what-we-do-card .card-description {
+  margin-top: 12px;
+  color: #7E7E7E;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  margin-bottom: 0;
+}
+
+@keyframes cornerPulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  15% {
+    transform: scale(1.4);
+    opacity: 1;
+  }
+  30% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.blog-card .card-img {
+  height: 317px;
+}
+.blog-card .card-img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.blog-card .card-infos {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.blog-card .card-infos .card-title {
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+}
+.blog-card .card-infos .card-description {
+  color: #7E7E7E;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  margin: 0;
+}
+
+.accordion {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.accordion .accordion-item {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: transparent;
+  border-bottom: 1px solid #5F5F5F;
+  padding-bottom: 16px;
+}
+.accordion .accordion-item:last-child {
+  border: none;
+}
+.accordion .accordion-item .accordion-header .accordion-button {
+  padding: 0;
+  box-shadow: none;
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: 120%;
+  display: flex;
+  justify-content: space-between;
+}
+.accordion .accordion-item .accordion-header .accordion-button::after {
+  display: none !important;
+}
+.accordion .accordion-item .accordion-header .accordion-button .accordion-icon {
+  display: inline-flex;
+  margin-left: 8px;
+}
+.accordion .accordion-item .accordion-header .accordion-button.collapsed .accordion-icon img {
+  transform: rotate(0deg);
+}
+.accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) .accordion-icon img {
+  transform: rotate(180deg);
+}
+.accordion .accordion-item .accordion-header:not(.collapsed) {
+  background-color: transparent;
+  color: #fff;
+  box-shadow: none;
+}
+.accordion .accordion-item .accordion-header:focus {
+  background-color: transparent;
+  color: #fff;
+  box-shadow: none;
+}
+.accordion .accordion-collapse .accordion-body {
+  padding: 0;
+  color: #FFF;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+
 .homepage-container .hero-section {
   overflow: hidden;
 }
@@ -561,6 +822,44 @@ body {
 .homepage-container .our-partners .brand-strip:hover .track {
   animation-play-state: paused;
 }
+.homepage-container .what-we-do {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.homepage-container .what-we-do .section-body .what-we-do-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.homepage-container .featured-blogs {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.homepage-container .featured-blogs .section-header {
+  display: flex;
+  justify-content: space-between;
+}
+.homepage-container .featured-blogs .section-body .blog-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+.homepage-container .frequently-asked-guestions {
+  padding: 70px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  background-color: #000;
+}
+.homepage-container .frequently-asked-guestions .section-header {
+  text-align: center;
+}
+.homepage-container .frequently-asked-guestions .section-header .section-title {
+  color: #fff;
+}
 @keyframes heroLineIn {
   from {
     opacity: 0;
@@ -600,39 +899,44 @@ body {
   }
 }
 
-.a {
-  background-color: red;
+.corner-logo {
+  width: 47px;
+  height: 47px;
+}
+.corner-logo .corner {
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: scale(1);
+  animation: cornerPulse 2s ease-in-out infinite;
+}
+.corner-logo .corner--tl {
+  animation-delay: 0s;
+}
+.corner-logo .corner--tr {
+  animation-delay: 0.5s;
+}
+.corner-logo .corner--br {
+  animation-delay: 1s;
+}
+.corner-logo .corner--bl {
+  animation-delay: 1.5s;
 }
 
-.brand-strip {
-  width: 100%;
-  overflow: hidden;
-  padding: 24px 0;
-  background: #000;
-}
-.brand-strip__track {
-  display: inline-flex;
-  align-items: center;
-  gap: 40px;
-  animation: brandScroll 3s linear infinite;
-}
-.brand-strip img {
-  height: 40px;
-  width: auto;
-  -o-object-fit: contain;
-     object-fit: contain;
-  filter: grayscale(1);
-  opacity: 0.8;
-}
-.brand-strip:hover .brand-strip__track {
-  animation-play-state: paused;
-}
-
-@keyframes brandScroll {
+@keyframes cornerPulse {
   0% {
-    transform: translateX(60%);
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  15% {
+    transform: scale(1.4);
+    opacity: 1;
+  }
+  30% {
+    transform: scale(1);
+    opacity: 0.8;
   }
   100% {
-    transform: translateX(-100%);
+    transform: scale(1);
+    opacity: 0.8;
   }
 }/*# sourceMappingURL=style.css.map */
