@@ -40,12 +40,12 @@
                     margin-left: 8px;
                 }
 
-                &.collapsed .accordion-icon img {
-                    transform: rotate(0deg);
+                &.collapsed  img {
+                    transform: rotate(180deg);
                 }
 
-                &:not(.collapsed) .accordion-icon img {
-                    transform: rotate(180deg); // və ya 180, necə xoşuna gəlirsə
+                &:not(.collapsed) img {
+                    transform: rotate(0deg); // və ya 180, necə xoşuna gəlirsə
                 }
             }
 

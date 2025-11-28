@@ -652,11 +652,11 @@ body {
   display: inline-flex;
   margin-left: 8px;
 }
-.accordion .accordion-item .accordion-header .accordion-button.collapsed .accordion-icon img {
-  transform: rotate(0deg);
-}
-.accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) .accordion-icon img {
+.accordion .accordion-item .accordion-header .accordion-button.collapsed img {
   transform: rotate(180deg);
+}
+.accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) img {
+  transform: rotate(0deg);
 }
 .accordion .accordion-item .accordion-header:not(.collapsed) {
   background-color: transparent;
