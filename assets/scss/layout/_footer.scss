@@ -150,6 +150,10 @@
 
                 .page-routes {
 
+                    @include mq(tablet-portrait-up) {
+                        text-align: center;
+                    }
+
                     a {
                         text-decoration: none;
                         text-wrap: nowrap;
@@ -157,6 +161,10 @@
                 }
 
                 .social-media {
+
+                    @include mq(tablet-portrait-up) {
+                        text-align: center;
+                    }
 
                     a {
                         display: flex;
@@ -204,6 +212,11 @@
         align-items: center;
         justify-content: flex-end;
         gap: 24px;
+
+
+        @include mq(tablet-portrait-up) {
+            flex-direction: column;
+        }
 
         span {
             text-decoration: none;
