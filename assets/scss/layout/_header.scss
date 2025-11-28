@@ -1,3 +1,5 @@
+@use '../abstracts/mixins' as *;
+
 .header-container {
     display: flex;
     justify-content: space-between;
@@ -55,5 +57,16 @@
             }
         }
 
+    }
+
+    @include mq(tablet-portrait-up) {
+
+        .hover-button-white{
+            display: none;
+        }
+
+        .header-navs{
+            display: none;
+        }
     }
 }

@@ -1,3 +1,5 @@
+@use '../abstracts/mixins' as *;
+
 .homepage-container {
 
     .hero-section {
@@ -7,6 +9,10 @@
             display: flex;
             flex-direction: column;
             padding: 50px;
+
+            @include mq(tablet-portrait-up) {
+                padding: 50px 16px;
+            }
 
             .hero-title {
                 position: relative;
@@ -133,239 +139,298 @@
                     padding-bottom: 24px;
                     border-bottom: 1px solid #5f5f5f;
 
-                    &:last-child {
-                        border-bottom: none;
-                        padding-bottom: 0;
-                    }
-
-                    span {
-                        color: #fff;
-                    }
-
-                    .value {
-                        color: #FFF;
-                        font-family: Aspekta;
-                        font-size: 56px;
-                        font-style: normal;
-                        font-weight: 550;
-                        line-height: 120%;
-                    }
-
-                    .label {
-                        color: #FFF;
-                        font-family: Aspekta;
-                        font-size: 16px;
-                        font-style: normal;
-                        font-weight: 450;
-                        line-height: 120%;
+                    @include mq(tablet-portrait-up) {
+                        width: 100%;
                     }
                 }
 
+                &:last-child {
+                    border-bottom: none;
+                    padding-bottom: 0;
+                }
+
+                span {
+                    color: #fff;
+                }
+
+                .value {
+                    color: #FFF;
+                    font-family: Aspekta;
+                    font-size: 56px;
+                    font-style: normal;
+                    font-weight: 550;
+                    line-height: 120%;
+                }
+
+                .label {
+                    color: #FFF;
+                    font-family: Aspekta;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 450;
+                    line-height: 120%;
+                }
             }
+
+            @include mq(tablet-portrait-up) {
+                padding: 50px 16px;
+            }
+
+        }
+
+
+    }
+}
+
+.selected-projects {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    @include mq(tablet-portrait-up) {
+        padding: 50px 16px;
+    }
+
+    .section-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include mq(tablet-portrait-up) {
+            flex-direction: column;
+            gap: 16px;
         }
     }
 
-    .selected-projects {
-        padding: 50px;
-        display: flex;
-        flex-direction: column;
+    .project-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         gap: 32px;
 
-        .section-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .project-cards {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 32px;
+        @include mq(tablet-portrait-up) {
+            grid-template-columns: repeat(1, 1fr);
         }
     }
+}
 
-    .services-offer {
-        padding: 32px 50px;
+.services-offer {
+    padding: 32px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    @include mq(tablet-portrait-up) {
+        padding: 32px 16px;
+    }
+
+    .section-header {
         display: flex;
-        flex-direction: column;
-        gap: 32px;
-
-        .section-header {
-            display: flex;
-            justify-content: center;
-        }
-
+        justify-content: center;
     }
 
-    .our-partners {
-        padding: 70px 50px;
-        background-color: #000;
+}
 
-        .section-title {
-            color: #FFF;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
+.our-partners {
+    padding: 70px 50px;
+    background-color: #000;
+
+    @include mq(tablet-portrait-up) {
+        padding: 70px 16px;
+    }
+
+    .section-title {
+        color: #FFF;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .section-text {
+        color: #FFF;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 550;
+        line-height: 120%;
+        margin-top: 16px;
+
+        .word {
+            opacity: 0;
+            animation: fadeInWord 0.4s ease forwards;
+            animation-delay: calc(var(--word-index) * 0.2s);
         }
 
-        .section-text {
-            color: #FFF;
+        .brand-highlight {
+            color: #83FAFC;
             font-size: 32px;
             font-style: normal;
             font-weight: 550;
             line-height: 120%;
-            margin-top: 16px;
+        }
+    }
 
-            .word {
-                opacity: 0;
-                animation: fadeInWord 0.4s ease forwards;
-                animation-delay: calc(var(--word-index) * 0.2s);
-            }
+    .hover-button {
+        margin-top: 32px;
+    }
 
-            .brand-highlight {
-                color: #83FAFC;
-                font-size: 32px;
-                font-style: normal;
-                font-weight: 550;
-                line-height: 120%;
-            }
+    .brand-strip {
+        width: 100%;
+        overflow: hidden;
+        padding: 24px 0;
+        background: #000;
+        margin-top: 72px;
+        display: flex;
+        flex-direction: column;
+        gap: 42px;
+
+        .track {
+            display: inline-flex;
+            align-items: center;
+            gap: 18px;
+            animation: brandScroll 10s linear infinite;
         }
 
-        .hover-button {
-            margin-top: 32px;
+        img {
+            height: 40px;
+            width: auto;
+            object-fit: contain;
+            filter: grayscale(1);
+            opacity: 0.8;
         }
 
-        .brand-strip {
-            width: 100%;
-            overflow: hidden;
-            padding: 24px 0;
-            background: #000;
-            margin-top: 72px;
-            display: flex;
+        &:hover .track {
+            animation-play-state: paused;
+        }
+    }
+
+}
+
+.what-we-do {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    @include mq(tablet-portrait-up) {
+        padding: 50px 16px;
+    }
+
+    .section-body {
+        .what-we-do-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+
+            @include mq(tablet-portrait-up) {
+                grid-template-columns: repeat(1, 1fr);
+
+            }
+        }
+    }
+
+}
+
+.featured-blogs {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    @include mq(tablet-portrait-up) {
+        padding: 50px 16px;
+    }
+
+    .section-header {
+        display: flex;
+        justify-content: space-between;
+
+        @include mq(tablet-portrait-up) {
             flex-direction: column;
-            gap: 42px;
-
-            .track {
-                display: inline-flex;
-                align-items: center;
-                gap: 18px;
-                animation: brandScroll 10s linear infinite;
-            }
-
-            img {
-                height: 40px;
-                width: auto;
-                object-fit: contain;
-                filter: grayscale(1);
-                opacity: 0.8;
-            }
-
-            &:hover .track {
-                animation-play-state: paused;
-            }
+            align-items: center;
+            gap: 32px;
         }
-
     }
 
-    .what-we-do {
-        padding: 50px;
-        display: flex;
-        flex-direction: column;
-        gap: 50px;
+    .section-body {
 
-        .section-body {
-            .what-we-do-cards {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
+        .blog-cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
 
-    }
+            @include mq(tablet-portrait-up) {
+                grid-template-columns: repeat(1, 1fr);
 
-    .featured-blogs {
-        padding: 50px;
-        display: flex;
-        flex-direction: column;
-        gap: 32px;
-
-        .section-header {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .section-body {
-
-            .blog-cards {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                gap: 32px;
             }
         }
     }
+}
 
-    .frequently-asked-guestions {
-        padding: 70px 50px;
-        display: flex;
-        flex-direction: column;
-        gap: 70px;
-        background-color: #000;
+.frequently-asked-guestions {
+    padding: 70px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    background-color: #000;
 
-        .section-header {
-            text-align: center;
-
-            .section-title {
-                color: #fff;
-            }
-        }
+    @include mq(tablet-portrait-up) {
+        padding: 70px 16px;
     }
 
+    .section-header {
+        text-align: center;
 
-
-    @keyframes heroLineIn {
-        from {
-            opacity: 0;
-            transform: translateY(-30px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(0);
+        .section-title {
+            color: #fff;
         }
     }
+}
 
-    @keyframes imgLine {
-        from {
-            opacity: 0;
-            transform: translateX(1000px);
-        }
 
-        to {
-            opacity: 1;
-            transform: translateX(-30px);
-        }
+
+@keyframes heroLineIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
     }
 
-    @keyframes fadeInWord {
-        from {
-            opacity: 0;
-            transform: translateY(10px);
-        }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
+@keyframes imgLine {
+    from {
+        opacity: 0;
+        transform: translateX(1000px);
     }
 
-    @keyframes brandScroll {
-        0% {
-            transform: translateX(0);
-        }
+    to {
+        opacity: 1;
+        transform: translateX(-30px);
+    }
+}
 
-        100% {
-            transform: translateX(-100%);
-        }
+@keyframes fadeInWord {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
     }
 
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes brandScroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
 }

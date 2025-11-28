@@ -1,3 +1,5 @@
+@use '../abstracts/mixins' as *;
+
 .footer-container {
     position: relative;
     background-color: #000;
@@ -7,10 +9,18 @@
     gap: 32px;
     overflow: hidden;
 
+    @include mq(tablet-portrait-up) {
+        padding: 70px 16px;
+    }
+
     .footer-top {
         display: flex;
         justify-content: space-between;
         gap: 50px;
+
+        @include mq(tablet-portrait-up) {
+            flex-direction: column;
+        }
 
         .left {
             display: flex;
@@ -98,6 +108,11 @@
                 display: flex;
                 gap: 16px;
 
+                @include mq(tablet-portrait-up) {
+                    width: 100%;
+                    justify-content: center;
+                }
+
                 .discover-projects {
                     padding: 12px;
                     color: #FFF;
@@ -116,10 +131,21 @@
                 display: flex;
                 gap: 50px;
 
+                @include mq(tablet-portrait-up) {
+                    flex-direction: column;
+                    align-items: center;
+                }
+
                 .contact-infos {
                     display: flex;
                     flex-direction: column;
                     gap: 50px;
+
+                    @include mq(tablet-portrait-up) {
+                        flex-direction: column;
+                        align-items: center;
+                        text-align: center;
+                    }
                 }
 
                 .page-routes {
