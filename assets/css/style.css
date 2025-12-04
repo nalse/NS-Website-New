@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 body {
   margin: 0;
@@ -8,6 +9,10 @@ body {
 
 p {
   margin-bottom: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 .section-title {
@@ -317,120 +322,175 @@ p {
   font-weight: 900;
 }
 
-.hover-button-white {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  border-radius: 6px;
-  padding: 12px;
-  background-color: #000;
-  color: #fff;
-  font-size: 14px;
-  font-weight: 500;
-  cursor: pointer;
-  overflow: hidden;
-  width: -moz-fit-content;
-  width: fit-content;
-  text-decoration: none;
-  transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease, transform 0.15s ease;
+/* ------------------ ANİMASİYALAR ------------------ */
+/* Circle: böyü → qal → kiçilt */
+@keyframes circlePulse {
+  0% {
+    width: 10px;
+    height: 10px;
+    left: 16px;
+    border-radius: 50%;
+  }
+  20% {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    border-radius: 5px;
+  }
+  80% {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    border-radius: 5px;
+  }
+  100% {
+    width: 10px;
+    height: 10px;
+    left: 16px;
+    border-radius: 50%;
+  }
 }
-.hover-button-white:active {
-  transform: scale(0.97);
+/* Icon: çıx → qal → geri gizlən */
+@keyframes iconPulse {
+  0% {
+    opacity: 0;
+    transform: translateX(12px);
+  }
+  20% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  80% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(12px);
+  }
 }
-.hover-button-white .circle {
-  position: absolute;
-  left: 16px;
-  top: 50%;
-  width: 8px;
-  height: 8px;
-  border-radius: 999px;
-  background-color: #ffffff;
-  transform: translateY(-50%);
-  transform-origin: center;
-  z-index: 1;
-  transition: transform 1s ease;
+/* White button üçün label rəngi: qara → ağ → qara */
+@keyframes labelPulseWhite {
+  0% {
+    color: #000;
+  }
+  20% {
+    color: #fff;
+  }
+  80% {
+    color: #fff;
+  }
+  100% {
+    color: #000;
+  }
 }
-.hover-button-white .label {
-  position: relative;
-  z-index: 9;
-  margin-left: 24px;
-}
-.hover-button-white img {
-  width: 24px;
-  margin-left: 8px;
-  opacity: 0;
-  transform: translateX(12px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-.hover-button-white.is-animating {
-  color: #000;
-  background-color: #fff;
-}
-.hover-button-white.is-animating .circle {
-  transform: translateY(-50%) scale(40);
-}
-.hover-button-white.is-animating img {
-  opacity: 1;
-  transform: translateX(0);
-}
-
+/* ------------------ BLACK BUTTON ------------------ */
 .hover-button-black {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  border-radius: 6px;
   padding: 12px;
-  background-color: #fff;
-  color: #000;
-  font-size: 14px;
-  font-weight: 500;
-  cursor: pointer;
-  overflow: hidden;
+  border-radius: 6px;
+  background: #000;
+  display: flex;
+  align-items: center;
   width: -moz-fit-content;
   width: fit-content;
-  text-decoration: none;
-  transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease, transform 0.15s ease;
-}
-.hover-button-black:active {
-  transform: scale(0.97);
-}
-.hover-button-black .circle {
-  position: absolute;
-  left: 16px;
-  top: 50%;
-  width: 8px;
-  height: 8px;
-  border-radius: 999px;
-  background-color: #000;
-  transform: translateY(-50%);
-  transform-origin: center;
-  z-index: 1;
-  transition: transform 1s ease;
+  position: relative;
+  overflow: hidden;
 }
 .hover-button-black .label {
-  position: relative;
-  z-index: 9;
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
   margin-left: 24px;
+  z-index: 9;
+  position: relative;
+}
+.hover-button-black .circle {
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(96deg, #60adac -1.27%, #ac5a7e 48%, #bdd9b4 99.19%);
+  border-radius: 50%;
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
 }
 .hover-button-black img {
   width: 24px;
   margin-left: 8px;
   opacity: 0;
   transform: translateX(12px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  position: relative;
+  z-index: 9;
 }
-.hover-button-black.is-animating {
-  color: #fff;
-  background-color: #fff;
+.hover-button-black:hover {
+  border: none;
 }
-.hover-button-black.is-animating .circle {
-  transform: translateY(-50%) scale(40);
+.hover-button-black:hover .circle {
+  animation: circlePulse 2s ease-out forwards;
 }
-.hover-button-black.is-animating img {
-  opacity: 1;
-  transform: translateX(0);
+.hover-button-black:hover img {
+  animation: iconPulse 2s ease-out forwards;
+}
+
+/* ------------------ WHITE BUTTON ------------------ */
+.hover-button-white {
+  padding: 12px;
+  border-radius: 6px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  overflow: hidden;
+}
+.hover-button-white .label,
+.hover-button-white span {
+  /* əgər HTML-də .label class-ı istifadə edirsənsə uyğun olsun deyə */
+  color: #000;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-left: 24px;
+  z-index: 9;
+  position: relative;
+}
+.hover-button-white .circle {
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(96deg, #60adac -1.27%, #ac5a7e 48%, #bdd9b4 99.19%);
+  border-radius: 50%;
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.hover-button-white img {
+  width: 24px;
+  margin-left: 8px;
+  opacity: 0;
+  transform: translateX(12px);
+  position: relative;
+  z-index: 9;
+}
+.hover-button-white:hover {
+  border: none;
+  /* label rəngi də circle kimi “pulse” etsin */
+}
+.hover-button-white:hover .label,
+.hover-button-white:hover span {
+  animation: labelPulseWhite 2s ease-out forwards;
+}
+.hover-button-white:hover .circle {
+  animation: circlePulse 2s ease-out forwards;
+}
+.hover-button-white:hover img {
+  animation: iconPulse 2s ease-out forwards;
 }
 
 .project-card {
@@ -1260,14 +1320,112 @@ p {
   }
 }
 
-.icon {
-  width: 100px;
-  height: 100px;
+.test-container {
+  padding: 50px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
-.icon img {
-  -o-object-fit: cover;
-     object-fit: cover;
+.test-container .black {
+  padding: 50px;
+  background-color: black;
+}
+.test-container .hover-button-black {
+  padding: 12px;
+  border-radius: 6px;
+  background: #000;
+  display: flex;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+}
+.test-container .hover-button-black span {
+  color: #FFF;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-left: 24px;
+  z-index: 9;
+}
+.test-container .hover-button-black .circle {
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(96deg, #60ADAC -1.27%, #AC5A7E 48%, #BDD9B4 99.19%);
+  border-radius: 50%;
+  position: absolute;
+  left: 16px;
+  transition: all 0.2s ease-in;
+}
+.test-container .hover-button-black img {
+  width: 24px;
+  margin-left: 8px;
+  opacity: 0;
+  transform: translateX(12px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.test-container .hover-button-black:hover {
+  border: none;
+}
+.test-container .hover-button-black:hover .circle {
   width: 100%;
   height: 100%;
-  background-color: green;
+  left: 0;
+  border-radius: 5px;
+}
+.test-container .hover-button-black:hover img {
+  opacity: 1;
+  transform: translateX(0);
+}
+.test-container .hover-button-white {
+  padding: 12px;
+  border-radius: 6px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+}
+.test-container .hover-button-white span {
+  color: #000;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-left: 24px;
+  z-index: 9;
+}
+.test-container .hover-button-white .circle {
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(96deg, #60ADAC -1.27%, #AC5A7E 48%, #BDD9B4 99.19%);
+  border-radius: 50%;
+  position: absolute;
+  left: 16px;
+  transition: all 0.2s ease-in;
+}
+.test-container .hover-button-white img {
+  width: 24px;
+  margin-left: 8px;
+  opacity: 0;
+  transform: translateX(12px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.test-container .hover-button-white:hover {
+  border: none;
+}
+.test-container .hover-button-white:hover span {
+  color: #fff;
+}
+.test-container .hover-button-white:hover .circle {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  border-radius: 5px;
+}
+.test-container .hover-button-white:hover img {
+  opacity: 1;
+  transform: translateX(0);
 }/*# sourceMappingURL=style.css.map */
