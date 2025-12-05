@@ -69,7 +69,6 @@
 
                     .dashed-title {
                         display: flex;
-                        position: relative;
 
                         span {
                             color: #FFF;
@@ -80,15 +79,11 @@
                         }
 
 
-                        .dot-img {
-                            width: 150px;
-                            height: 170px;
-                            aspect-ratio: 25.00/25.31;
-                            position: absolute;
-                            left: 360px;
-                            top: -20px;
-
-                        }
+                        // .dot-img {
+                        //     // position: absolute;
+                        //     // top: 8px;
+                        //     // left: 370px;
+                        // }
 
                     }
 

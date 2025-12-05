@@ -155,7 +155,6 @@ a {
 }
 .footer-container .footer-top .left .dashed-box .dashed-header .dashed-title {
   display: flex;
-  position: relative;
 }
 .footer-container .footer-top .left .dashed-box .dashed-header .dashed-title span {
   color: #FFF;
@@ -163,14 +162,6 @@ a {
   font-style: normal;
   font-weight: 550;
   line-height: 120%;
-}
-.footer-container .footer-top .left .dashed-box .dashed-header .dashed-title .dot-img {
-  width: 150px;
-  height: 170px;
-  aspect-ratio: 25/25.31;
-  position: absolute;
-  left: 360px;
-  top: -20px;
 }
 .footer-container .footer-top .left .dashed-box .dashed-header .dashed-description {
   color: rgba(255, 255, 255, 0.7);
@@ -524,6 +515,7 @@ a {
   background-image: linear-gradient(to right, #000 0%, #000 45%, rgba(245, 66, 157, 0.768627451) 100%);
   opacity: 0;
   transition: all 0.5s ease-in;
+  z-index: 9;
 }
 .project-card .card-img .card-button span {
   color: #FFF;
@@ -1320,112 +1312,12 @@ a {
   }
 }
 
-.test-container {
-  padding: 50px 50px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+.portfolio-details-container .portfolio-details-hero {
+  height: 719px;
 }
-.test-container .black {
-  padding: 50px;
-  background-color: black;
-}
-.test-container .hover-button-black {
-  padding: 12px;
-  border-radius: 6px;
-  background: #000;
-  display: flex;
-  align-items: center;
-  width: -moz-fit-content;
-  width: fit-content;
-  position: relative;
-}
-.test-container .hover-button-black span {
-  color: #FFF;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  margin-left: 24px;
-  z-index: 9;
-}
-.test-container .hover-button-black .circle {
-  width: 10px;
-  height: 10px;
-  background: linear-gradient(96deg, #60ADAC -1.27%, #AC5A7E 48%, #BDD9B4 99.19%);
-  border-radius: 50%;
-  position: absolute;
-  left: 16px;
-  transition: all 0.2s ease-in;
-}
-.test-container .hover-button-black img {
-  width: 24px;
-  margin-left: 8px;
-  opacity: 0;
-  transform: translateX(12px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-.test-container .hover-button-black:hover {
-  border: none;
-}
-.test-container .hover-button-black:hover .circle {
+.portfolio-details-container .portfolio-details-hero img {
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
   height: 100%;
-  left: 0;
-  border-radius: 5px;
-}
-.test-container .hover-button-black:hover img {
-  opacity: 1;
-  transform: translateX(0);
-}
-.test-container .hover-button-white {
-  padding: 12px;
-  border-radius: 6px;
-  background: #fff;
-  display: flex;
-  align-items: center;
-  width: -moz-fit-content;
-  width: fit-content;
-  position: relative;
-}
-.test-container .hover-button-white span {
-  color: #000;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  margin-left: 24px;
-  z-index: 9;
-}
-.test-container .hover-button-white .circle {
-  width: 10px;
-  height: 10px;
-  background: linear-gradient(96deg, #60ADAC -1.27%, #AC5A7E 48%, #BDD9B4 99.19%);
-  border-radius: 50%;
-  position: absolute;
-  left: 16px;
-  transition: all 0.2s ease-in;
-}
-.test-container .hover-button-white img {
-  width: 24px;
-  margin-left: 8px;
-  opacity: 0;
-  transform: translateX(12px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-.test-container .hover-button-white:hover {
-  border: none;
-}
-.test-container .hover-button-white:hover span {
-  color: #fff;
-}
-.test-container .hover-button-white:hover .circle {
-  width: 100%;
-  height: 100%;
-  left: 0;
-  border-radius: 5px;
-}
-.test-container .hover-button-white:hover img {
-  opacity: 1;
-  transform: translateX(0);
 }/*# sourceMappingURL=style.css.map */
