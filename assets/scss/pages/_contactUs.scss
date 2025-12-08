@@ -1,0 +1,23 @@
+.contact-us-container {
+
+    .form-container {
+        padding: 100px 50px 50px 50px;
+        display: flex;
+
+
+        .our-connection-infos {
+            width: 50%;
+
+            .infos-header{
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .infos-body{
+                
+            }
+        }
+    }
+
+}

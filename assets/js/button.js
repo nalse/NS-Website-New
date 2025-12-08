@@ -1,27 +1,27 @@
-const whiteButtons = document.querySelectorAll('.hover-button-white');
+// const whiteButtons = document.querySelectorAll('.hover-button-white');
 
-whiteButtons.forEach((btn) => {
-  btn.addEventListener('mouseenter', () => {
-    if (btn.classList.contains('is-animating')) return;
+// whiteButtons.forEach((btn) => {
+//   btn.addEventListener('mouseenter', () => {
+//     if (btn.classList.contains('is-animating')) return;
 
-    btn.classList.add('is-animating');
+//     btn.classList.add('is-animating');
 
-    setTimeout(() => {
-      btn.classList.remove('is-animating');
-    }, 500);
-  });
-});
+//     setTimeout(() => {
+//       btn.classList.remove('is-animating');
+//     }, 500);
+//   });
+// });
 
-const blackButtons = document.querySelectorAll('.hover-button-black');
+// const blackButtons = document.querySelectorAll('.hover-button-black');
 
-blackButtons.forEach((btn) => {
-  btn.addEventListener('mouseenter', () => {
-    if (btn.classList.contains('is-animating')) return;
+// blackButtons.forEach((btn) => {
+//   btn.addEventListener('mouseenter', () => {
+//     if (btn.classList.contains('is-animating')) return;
 
-    btn.classList.add('is-animating');
+//     btn.classList.add('is-animating');
 
-    setTimeout(() => {
-      btn.classList.remove('is-animating');
-    }, 500);
-  });
-});
+//     setTimeout(() => {
+//       btn.classList.remove('is-animating');
+//     }, 500);
+//   });
+// });
