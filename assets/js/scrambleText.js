@@ -1,15 +1,41 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const elements = document.querySelectorAll('.scramble-text');
+document.addEventListener("DOMContentLoaded", () => {
+  const elements = document.querySelectorAll(".scramble-text");
   if (!elements.length) return;
 
   elements.forEach((el) => {
-    const finalText = el.textContent.trim();
-    scrambleText(el, finalText, 1200);
+    el.dataset.finalText = el.textContent.trim();
   });
+
+  const observer = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+
+          if (el.dataset.scrambleStarted === "true") {
+            obs.unobserve(el);
+            return;
+          }
+
+          el.dataset.scrambleStarted = "true";
+
+          const finalText = el.dataset.finalText || el.textContent.trim();
+          scrambleText(el, finalText, 1200);
+
+          obs.unobserve(el);
+        }
+      });
+    },
+    {
+      threshold: 0.3,
+    }
+  );
+
+  elements.forEach((el) => observer.observe(el));
 });
 
 function scrambleText(element, text, duration = 1200) {
-  const chars = '471047235829876';
+  const chars = "471047235829876";
   const frameDuration = 40;
   const totalFrames = Math.round(duration / frameDuration);
 
@@ -25,7 +51,7 @@ function scrambleText(element, text, duration = 1200) {
 
   let frame = 0;
   const timer = setInterval(() => {
-    let output = '';
+    let output = "";
     let complete = 0;
 
     for (let i = 0; i < queue.length; i++) {
@@ -42,7 +68,7 @@ function scrambleText(element, text, duration = 1200) {
         }
         output += `<span class="scramble-char">${char}</span>`;
       } else {
-        output += ' ';
+        output += " ";
       }
     }
 

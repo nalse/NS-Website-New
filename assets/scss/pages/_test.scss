@@ -1,1 +1,64 @@
-//  
+// .logo-strip {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 42px;
+//   background-color: red;
+
+//   .track {
+//     --s: 150px;  /* logo “size” */
+//     --d: 8s;     /* duration */
+//     --n: 8;      /* eyni anda nəzərdə tutulan logo sayı (offset hesabında işlənir) */
+
+//     background-color: #000;
+//     display: flex;
+//     gap: 18px;
+//     overflow: hidden;
+//     margin: 0;
+
+//     img {
+//       /* motion path + animasiya */
+//       offset: shape(
+//         from calc(var(--s) / -2) 50%,
+//         hline by calc(
+//           sibling-count() * max(100% / var(--n), var(--s) + 10px)
+//         )
+//       );
+//       animation: x var(--d) linear infinite
+//         calc(-1 * sibling-index() * var(--d) / sibling-count());
+//       animation-play-state: running;
+//       height: 40px;
+//       width: auto;
+//       object-fit: contain;
+//     }
+
+//     /* HOVER: yalnız bu track-in içindəki logolar dursun */
+//     &:hover img {
+//       animation-play-state: paused;
+//     }
+
+//     /* İKİNCİ TRACK: əks istiqamət */
+//     &:nth-child(2) img {
+//       animation-name: x-reverse; // eyni parametrlər, sadəcə başqa keyframes
+//     }
+//   }
+// }
+
+// /* Üst track üçün (default) – sağdan sola */
+// @keyframes x {
+//   0% {
+//     offset-distance: 0%;
+//   }
+//   100% {
+//     offset-distance: 100%;
+//   }
+// }
+
+// /* Alt track üçün – soldan sağa (əks istiqamət) */
+// @keyframes x-reverse {
+//   0% {
+//     offset-distance: 100%;
+//   }
+//   100% {
+//     offset-distance: 0%;
+//   }
+// }

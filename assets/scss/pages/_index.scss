@@ -171,40 +171,7 @@
         margin-top: 32px;
     }
 
-    .brand-strip {
-        width: 100%;
-        overflow: hidden;
-        padding: 24px 0;
-        background: #000;
-        margin-top: 72px;
-        display: flex;
-        flex-direction: column;
-        gap: 42px;
 
-        .track {
-            display: inline-flex;
-            align-items: center;
-            gap: 18px;
-            will-change: transform;
-            animation: brandScrollLeft 10s linear infinite;
-        }
-
-        .track:nth-child(2) {
-            animation-name: brandScrollRight;
-        }
-
-        img {
-            height: 40px;
-            width: auto;
-            object-fit: contain;
-            filter: grayscale(1);
-            opacity: 0.8;
-        }
-
-        &:hover .track {
-            animation-play-state: paused;
-        }
-    }
 }
 
 .what-we-do {
