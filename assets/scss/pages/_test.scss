@@ -1,64 +1,27 @@
-// .logo-strip {
-//   display: flex;
-//   flex-direction: column;
-//   gap: 42px;
-//   background-color: red;
+.test-container {
+  padding: 20px;
 
-//   .track {
-//     --s: 150px;  /* logo “size” */
-//     --d: 8s;     /* duration */
-//     --n: 8;      /* eyni anda nəzərdə tutulan logo sayı (offset hesabında işlənir) */
+  .posts {
+    gap: 16px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 
-//     background-color: #000;
-//     display: flex;
-//     gap: 18px;
-//     overflow: hidden;
-//     margin: 0;
+    .post {
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      background: #fafafa;
 
-//     img {
-//       /* motion path + animasiya */
-//       offset: shape(
-//         from calc(var(--s) / -2) 50%,
-//         hline by calc(
-//           sibling-count() * max(100% / var(--n), var(--s) + 10px)
-//         )
-//       );
-//       animation: x var(--d) linear infinite
-//         calc(-1 * sibling-index() * var(--d) / sibling-count());
-//       animation-play-state: running;
-//       height: 40px;
-//       width: auto;
-//       object-fit: contain;
-//     }
+      .post-title {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
 
-//     /* HOVER: yalnız bu track-in içindəki logolar dursun */
-//     &:hover img {
-//       animation-play-state: paused;
-//     }
-
-//     /* İKİNCİ TRACK: əks istiqamət */
-//     &:nth-child(2) img {
-//       animation-name: x-reverse; // eyni parametrlər, sadəcə başqa keyframes
-//     }
-//   }
-// }
-
-// /* Üst track üçün (default) – sağdan sola */
-// @keyframes x {
-//   0% {
-//     offset-distance: 0%;
-//   }
-//   100% {
-//     offset-distance: 100%;
-//   }
-// }
-
-// /* Alt track üçün – soldan sağa (əks istiqamət) */
-// @keyframes x-reverse {
-//   0% {
-//     offset-distance: 100%;
-//   }
-//   100% {
-//     offset-distance: 0%;
-//   }
-// }
+      .post-body {
+        font-size: 14px;
+        color: #555;
+      }
+    }
+  }
+}
