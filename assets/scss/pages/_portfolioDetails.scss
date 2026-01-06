@@ -34,12 +34,21 @@
                 width: 100%;
             }
 
-            .badget {
-                padding: 10px 16px;
-                border-radius: 99px;
-                background: #E9E9E9;
-                width: fit-content;
+            .badgets {
+                display: flex;
+                gap: 8px;
+                align-items: center;
+
+                .badget {
+                    padding: 10px 16px;
+                    border-radius: 99px;
+                    background: #E9E9E9;
+                    width: fit-content;
+                    color: #000;
+                }
             }
+
+
 
             .intro-title {
                 color: #000;
@@ -71,7 +80,7 @@
 
         }
 
-        img {   
+        img {
             object-fit: cover;
             width: 100%;
             height: 100%;

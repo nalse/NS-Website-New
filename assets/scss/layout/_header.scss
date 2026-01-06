@@ -58,14 +58,55 @@
         }
     }
 
+    .header-actions {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        .btn-group {
+
+            .dropdown-toggle::after {
+                display: none;
+            }
+
+            .select-language {
+                border-radius: 6px;
+                background: var(--Neutral-colors-Light-Gray-15, rgba(190, 190, 190, 0.15));
+
+                &:focus{
+                    border: none;
+                }
+
+                .selected-lang {
+                    font-weight: 500;
+                }
+            }
+
+            .dropdown-menu {
+                padding: 8px;
+
+                .dropdown-item {
+                    padding: 0;
+
+                    &:hover {
+                        background-color: transparent;
+                    }
+                }
+            }
+
+        }
+
+
+    }
+
     @include mq(tablet-landscape-up) {
         padding: 12px;
 
-        .hover-button-black{
+        .hover-button-black {
             display: none;
         }
 
-        .header-navs{
+        .header-navs {
             display: none;
         }
     }
