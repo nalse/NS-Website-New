@@ -1500,13 +1500,13 @@ textarea {
 }
 
 .portfolio-details-container .hero-image {
-  height: 719px;
+  height: 700px;
 }
-.portfolio-details-container .hero-image img {
+.portfolio-details-container .hero-image video {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
-  height: 100%;
+  height: 700px;
 }
 .portfolio-details-container .text-section {
   display: flex;
@@ -1738,6 +1738,54 @@ textarea {
   .blogs-container .blogs-hero p {
     width: 100%;
   }
+}
+.blogs-container .blog-categories {
+  padding: 50px 50px;
+  display: flex;
+  justify-content: center;
+  gap: 128px;
+}
+.blogs-container .blog-categories .category-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: transparent;
+  border: none;
+  transition: all 0.2s ease-in;
+}
+.blogs-container .blog-categories .category-box:hover {
+  transform: scale(1.1);
+}
+.blogs-container .blog-categories .category-box .category-icon {
+  padding: 10px;
+  border-radius: 8px;
+}
+.blogs-container .blog-categories .category-box .category-icon svg {
+  width: 24px;
+  height: 24px;
+}
+.blogs-container .blog-categories .category-box .news {
+  background-color: #7BD88A;
+}
+.blogs-container .blog-categories .category-box .campagin {
+  background-color: #3C7FF1;
+}
+.blogs-container .blog-categories .category-box .article {
+  background-color: #49D4BA;
+}
+.blogs-container .blog-categories .category-box .other {
+  background-color: #6F5FA6;
+}
+.blogs-container .blog-categories .category-box .category-infos {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.blogs-container .blog-categories .category-box .category-infos .category-title {
+  font-weight: 500;
+}
+.blogs-container .blog-categories .category-box .category-infos .count {
+  color: #7e7e7e;
 }
 .blogs-container .most-recent-blogs {
   padding: 0 50px 100px 50px;

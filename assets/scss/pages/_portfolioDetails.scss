@@ -4,13 +4,12 @@
 
 
     .hero-image {
+        height: 700px;
 
-        height: 719px;
-
-        img {
+        video {
             object-fit: cover;
             width: 100%;
-            height: 100%;
+            height: 700px;
         }
     }
 
