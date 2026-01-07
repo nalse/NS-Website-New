@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Təməl viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <!-- Zoom meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>NS Studio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <div class="our-services-container">
+
+        <!-- header -->
+        <header class="header-container">
+
+            <a href="index.html" class="logo-container">
+                <img src="assets/imges/logo-layer.png" alt="logo">
+            </a>
+
+            <div class="header-navs">
+                <a href="aboutUs.html" class="nav-link" data-text="About Us">
+                    <span class="nav-link__inner">About Us</span>
+                </a>
+
+                <a href="ourServices.html" class="nav-link" data-text="Our Services">
+                    <span class="nav-link__inner">Our Services</span>
+                </a>
+                <a href="portfolio.html" class="nav-link" data-text="Case Studies">
+                    <span class="nav-link__inner">Case Studies</span>
+                </a>
+                <a href="partners.html" class="nav-link" data-text="Partners">
+                    <span class="nav-link__inner">Partners</span>
+                </a>
+                <a href="blogs.html" class="nav-link" data-text="Blogs">
+                    <span class="nav-link__inner">Blogs</span>
+                </a>
+            </div>
+
+            <div class="header-actions">
+
+                <div class="btn-group" id="langDropdown">
+
+                    <button type="button"
+                        class="btn select-language dropdown-toggle d-inline-flex align-items-center gap-2"
+                        data-bs-toggle="dropdown" aria-expanded="false" id="langToggle">
+                        <span class="selected-lang">AZE</span>
+                        <img src="assets/icons/dropdown-icon.svg" alt="">
+                    </button>
+
+                    <ul class="dropdown-menu" id="langMenu">
+                        <li><a class="dropdown-item" href="#" data-lang="az" data-label="AZE">AZE</a></li>
+                        <li><a class="dropdown-item" href="#" data-lang="eng" data-label="ENG">ENG</a></li>
+                    </ul>
+
+                </div>
+
+                <a href="contactUs.html" class="hover-button-black">
+                    <div class="circle"></div>
+                    <span class="label">Get in Touch</span>
+                </a>
+
+            </div>
+
+            <button class="btn-offcanvas" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
+                aria-controls="offcanvas">
+                <img src="assets/icons/offcanvas-icon.svg" alt="">
+            </button>
+
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvas">
+
+                <div class="offcanvas-header">
+                    <a href="index.html" class="logo-container">
+                        <img src="assets/imges/logo-layer.png" alt="logo">
+                    </a>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+
+                <div class="offcanvas-body">
+
+                    <div class="offcanvas-navs">
+                        <a href="aboutUs.html" class="nav-link"><span>About Us</span> <img
+                                src="assets/icons/arrow-up.svg" alt=""></a>
+                        <a href="ourServices.html" class="nav-link"><span>Our Services</span> <img
+                                src="assets/icons/arrow-up.svg" alt=""></a>
+                        <a href="portfolio.html" class="nav-link"><span>Case Studies</span> <img
+                                src="assets/icons/arrow-up.svg" alt=""></a>
+                        <a href="partners.html" class="nav-link"><span>Partners</span> <img
+                                src="assets/icons/arrow-up.svg" alt=""></a>
+                        <a href="blogs.html" class="nav-link"><span>Blogs</span> <img src="assets/icons/arrow-up.svg"
+                                alt=""></a>
+                    </div>
+
+                    <div class="offcanvas-actions">
+
+                        <a class="hover-button-white">
+                            <span class="circle"></span>
+                            <span class="label">Get in Touch</span>
+                        </a>
+
+                        <a href="" class="view-projects">View Projects</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- hero -->
+        <div class="hero-section">
+
+            <span class="section-title">Product Design that <span>Boosts <br>Conversions <b>&</b> User
+                    Experience</span></span>
+
+            <p class="section-description">
+                Get hight impacted UX/UI Design for your SaaS ProductWe’ve partnered with
+                brands across industries to design, build, and launch digital products that actually perform. From sleek
+                interfaces to full-scale platforms and strategic marketing campaigns, our work is all about clarity,
+                impact, and results.
+            </p>
+
+            <a class="hover-button-black">
+                <div class="circle"></div>
+                <span class="label">Get in Touch</span>
+            </a>
+
+            <div class="badgets">
+                <div class="badget">
+                    Web app design
+                </div>
+                <div class="badget">
+                    Landing page design
+                </div>
+                <div class="badget">
+                    Mobile app design
+                </div>
+                <div class="badget">
+                    Prototype
+                </div>
+                <div class="badget">
+                    Design System
+                </div>
+                <div class="badget">
+                    UX Writing
+                </div>
+            </div>
+
+        </div>
+
+        <!-- how we do -->
+        <section class="how-we-do">
+
+            <div class="section-intro">
+                <span class="section-title">
+                    How we Create User Experienced Product Designs
+                </span>
+            </div>
+
+            <div class="section-text">
+                Overview
+                <br>
+                Eduventos is an AI-powered education platform designed to make learning more personalized, efficient,
+                and accessible. The product combines adaptive lessons, smart analytics, and an intuitive user experience
+                to support students, teachers, and institutions. NS Studio stepped in to shape the platform’s UX,
+                structure the product, and bring the vision to life with clarity and purpose.
+                <br><br>
+                The Goal
+                <br>
+                Create a personalized learning experience using AI-driven recommendations.
+                Simplify the teaching workflow with clear dashboards and intuitive tools.
+                Increase student engagement through adaptive lessons and progress tracking.
+                Make complex educational data easy to understand for students, teachers, and admins.
+                Support scalability so the platform can grow with new features and user groups.
+                Design an interface that feels modern, clean, and frustration-free for all users.
+            </div>
+
+        </section>
+
+        <!-- selected project -->
+        <section class="selected-projects">
+
+            <div class="section-header">
+
+                <span class="section-title">Our Selected Projects</span>
+
+                <a href="" class="hover-button-black">
+                    <div class="circle"></div>
+                    <span class="label">See all</span>
+                </a>
+
+            </div>
+
+            <div class="project-cards">
+
+                <div class="project-card">
+
+                    <div class="card-img">
+
+                        <div class="swiper my-swiper">
+                            <div class="swiper-wrapper">
+                                <!-- Slide 1 -->
+                                <div class="swiper-slide">
+                                    <img src="assets/imges/project-card-img.png" alt="Şəkil 1" />
+                                </div>
+                                <!-- Slide 2 -->
+                                <div class="swiper-slide">
+                                    <img src="assets/imges/project-card-img2.png" alt="Şəkil 2" />
+                                </div>
+                                <!-- Slide 3 -->
+                                <div class="swiper-slide">
+                                    <img src="assets/imges/project-card-img3.png" alt="Şəkil 3" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="portfolioDetails.html" class="card-button take-a-look">
+                            <span>Take a look</span>
+                            <img src="assets/icons/arrow-up-white.svg" alt="">
+                        </a>
+
+                    </div>
+
+                    <div class="card-infos">
+
+                        <span class="card-title">Eduventos - AI Supported Education Platform</span>
+                        <span class="card-description">
+                            Eduventos is an AI-powered education platform built to make
+                            learning actually feel smart, personalized, and effortless
+                        </span>
+
+                        <div class="card-badgets">
+                            <div class="badget">
+                                <span>UX/UI Design</span>
+                            </div>
+                            <div class="badget">
+                                <span>Mobile Development</span>
+                            </div>
+                            <div class="badget">
+                                <span>Backend Development</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="project-card">
+
+                    <div class="card-img">
+
+                        <div class="swiper my-swiper">
+                            <div class="swiper-wrapper">
+                                <!-- Slide 1 -->
+                                <div class="swiper-slide">
+                                    <img src="assets/imges/project-card-img.png" alt="Şəkil 1" />
+                                </div>
+                                <!-- Slide 2 -->
+                                <div class="swiper-slide">
+                                    <img src="assets/imges/project-card-img2.png" alt="Şəkil 2" />
+                                </div>
+                                <!-- Slide 3 -->
+                                <div class="swiper-slide">
+                                    <img src="assets/imges/project-card-img3.png" alt="Şəkil 3" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="portfolioDetails.html" class="card-button take-a-look">
+                            <span>Take a look</span>
+                            <img src="assets/icons/arrow-up-white.svg" alt="">
+                        </a>
+
+                    </div>
+
+                    <div class="card-infos">
+
+                        <span class="card-title">Eduventos - AI Supported Education Platform</span>
+                        <span class="card-description">
+                            Eduventos is an AI-powered education platform built to make
+                            learning actually feel smart, personalized, and effortless
+                        </span>
+
+                        <div class="card-badgets">
+                            <div class="badget">
+                                <span>UX/UI Design</span>
+                            </div>
+                            <div class="badget">
+                                <span>Mobile Development</span>
+                            </div>
+                            <div class="badget">
+                                <span>Backend Development</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- other services -->
+        <section class="services-offer">
+
+            <div class="section-header">
+                <span class="section-title">Other Services</span>
+
+                <a href="" class="hover-button-black">
+                    <div class="circle"></div>
+                    <span class="label">See all</span>
+                </a>
+            </div>
+
+            <div class="section-body">
+
+                <div class="hover-accordion">
+
+                    <div class="accordion-item">
+
+                        <div class="content">
+
+                            <div class="content-title">
+                                <span class="list-num">01</span>
+                                <span class="title-text">Brand Identity Design</span>
+                            </div>
+
+                            <div class="infos">
+                                <span>Brand Research and Analysis</span>
+                                <span>Brand Strategy</span>
+                                <span>Logotype & Logomarks</span>
+                            </div>
+
+                        </div>
+
+                        <div class="accordion-img">
+                            <img src="assets/imges/hover-img.png" alt="">
+                        </div>
+
+                    </div>
+
+                    <div class="accordion-item">
+
+                        <div class="content">
+
+                            <div class="content-title">
+                                <span class="list-num">02</span>
+                                <span class="title-text">Website </span>
+                            </div>
+
+                            <div class="infos">
+                                <span>Brand Research and Analysis</span>
+                                <span>Brand Strategy</span>
+                                <span>Logotype & Logomarks</span>
+                            </div>
+
+                        </div>
+
+                        <div class="accordion-img">
+                            <img src="assets/imges/hover-img3.png" alt="">
+                        </div>
+
+                    </div>
+
+                    <div class="accordion-item">
+
+                        <div class="content">
+
+                            <div class="content-title">
+                                <span class="list-num">03</span>
+                                <span class="title-text">Mobile Applications</span>
+                            </div>
+
+                            <div class="infos">
+                                <span>Brand Research and Analysis</span>
+                                <span>Brand Strategy</span>
+                                <span>Logotype & Logomarks</span>
+                            </div>
+
+                        </div>
+
+                        <div class="accordion-img">
+                            <img src="assets/imges/project-card-img2.png" alt="">
+                        </div>
+
+                    </div>
+
+                    <div class="accordion-item">
+
+                        <div class="content">
+
+                            <div class="content-title">
+                                <span class="list-num">04</span>
+                                <span class="title-text">Digital Marketing</span>
+                            </div>
+
+                            <div class="infos">
+                                <span>Brand Research and Analysis</span>
+                                <span>Brand Strategy</span>
+                                <span>Logotype & Logomarks</span>
+                            </div>
+
+                        </div>
+
+                        <div class="accordion-img">
+                            <img src="assets/imges/hover-img2.png" alt="">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- frequently asked questions (accordion) -->
+        <section class="frequently-asked-guestions">
+
+            <div class="section-header">
+
+                <span class="section-title">Frequently Asked Questions</span>
+
+            </div>
+
+            <div class="section-body">
+
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                aria-controls="flush-collapseOne">
+                                <span>1. What services does NS Studio provide?</span>
+                                <img src="assets/icons/accordion-icon.svg" alt="">
+                            </button>
+                        </div>
+
+                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                We offer a full suite of digital services—including UX/UI design, product design, web &
+                                app development, branding, and digital marketing. Basically, if it lives online or needs
+                                to be built, we’ve got you.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                aria-controls="flush-collapseTwo">
+                                <span>2. How long does a typical project take?</span>
+                                <img src="assets/icons/accordion-icon.svg" alt="">
+                            </button>
+                        </div>
+
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                We offer a full suite of digital services—including UX/UI design, product design, web &
+                                app development, branding, and digital marketing. Basically, if it lives online or needs
+                                to be built, we’ve got you.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                aria-controls="flush-collapseThree">
+                                <span>3. What does your process look like from start to finish?</span>
+                                <img src="assets/icons/accordion-icon.svg" alt="">
+                            </button>
+                        </div>
+
+                        <div id="flush-collapseThree" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                We offer a full suite of digital services—including UX/UI design, product design, web &
+                                app development, branding, and digital marketing. Basically, if it lives online or needs
+                                to be built, we’ve got you.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseFour" aria-expanded="false"
+                                aria-controls="flush-collapseFour">
+                                <span>4. Do you work with startups or only established brands?</span>
+                                <img src="assets/icons/accordion-icon.svg" alt="">
+                            </button>
+                        </div>
+
+                        <div id="flush-collapseFour" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                We offer a full suite of digital services—including UX/UI design, product design, web &
+                                app development, branding, and digital marketing. Basically, if it lives online or needs
+                                to be built, we’ve got you.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseFive" aria-expanded="false"
+                                aria-controls="flush-collapseFive">
+                                <span>5. How do we get started with a project?</span>
+                                <img src="assets/icons/accordion-icon.svg" alt="">
+                            </button>
+                        </div>
+
+                        <div id="flush-collapseFive" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                We offer a full suite of digital services—including UX/UI design, product design, web &
+                                app development, branding, and digital marketing. Basically, if it lives online or needs
+                                to be built, we’ve got you.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- footer (baxılacaq) -->
+        <footer class="footer-container">
+
+            <div class="footer-top">
+
+                <div class="left">
+
+                    <div class="dashed-box">
+
+                        <div class="dashed-header">
+
+                            <div class="dashed-title">
+
+                                <span>
+                                    Let’s Turn Your Vision Into Something Real — With the Perfect Final Dot
+                                    <img class="dot-img" src="assets/icons/ns-fot-footer.png" alt="NS Studio dot" />
+                                </span>
+
+
+                            </div>
+
+                            <span class="dashed-description">
+                                Whether you need design, development, strategy, or full-on product support, NS Studio is
+                                here to take your project from “almost” to “done right.”
+                            </span>
+
+                        </div>
+
+
+                        <div class="dashed-box__corner dashed-box__corner--tl"></div>
+                        <div class="dashed-box__corner dashed-box__corner--bl"></div>
+                        <div class="dashed-box__corner dashed-box__corner--tr"></div>
+                        <div class="dashed-box__corner dashed-box__corner--br"></div>
+
+                    </div>
+
+                    <div class="actions">
+                        <a href="" class="hover-button-white">
+                            <div class="circle"></div>
+                            <span class="label">Get in Touch</span>
+                            <img src="assets/icons/arrow-up-white.svg" alt="">
+                        </a>
+
+                        <a href="#" class="discover-projects">Discover Our Projects</a>
+
+                    </div>
+
+                </div>
+
+                <div class="right">
+                    <div class="footer-infos">
+
+                        <div class="contact-infos">
+
+                            <div class="flex-div">
+                                <span class="info-title">Office</span>
+                                <span class="info">Çinar Park Biznes Mərkəzi, Bina 6, Mərtəbə 3, Ofis 1</span>
+                            </div>
+
+
+                            <div class="flex-div">
+                                <span class="info-title">Phone number</span>
+                                <span class="info"> (099) 399 06 39</span>
+                            </div>
+
+                        </div>
+
+                        <div class="page-routes flex-div">
+                            <span class="info-title">
+                                NS Studio
+                            </span>
+
+                            <div class="infos">
+                                <a class="info" href="aboutUs.html">About Us</a>
+                                <a class="info" href="ourServices.html">Our Services</a>
+                                <a class="info" href="portfolio.html">Case Studies</a>
+                                <a class="info" href="blogs.html">Blogs</a>
+                                <a class="info" href="partners.html">Partners</a>
+                            </div>
+
+                        </div>
+
+                        <div class="social-media flex-div">
+                            <span class="info-title">Social Media</span>
+
+                            <div class="infos">
+                                <a href="https://www.instagram.com/nsstudio.az/" class="info"><span>Instagram</span><img
+                                        src="assets/icons/arrow-up-white.svg" alt=""></a>
+                                <a href="https://www.linkedin.com/company/nsstudio-az/posts/?feedView=all"
+                                    class="info"><span>Linkedin</span><img src="assets/icons/arrow-up-white.svg"
+                                        alt=""></a>
+                                <a href="https://www.facebook.com/nsstudioaz/" class="info"><span>Facebook</span><img
+                                        src="assets/icons/arrow-up-white.svg" alt=""></a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="privacy-and-policy">
+
+                <a href="privacyAndPolicy.html">Privacy Policy</a>
+
+                <span><b>© 2025 NS Studio.</b> Bütün hüquqlar qorunur</span>
+            </div>
+
+            <div class="gradient-layer-left"></div>
+            <div class="gradient-layer-right"></div>
+
+        </footer>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>

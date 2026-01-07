@@ -133,6 +133,9 @@ textarea {
   .header-container .header-navs {
     display: none;
   }
+  .header-container .header-actions {
+    margin-left: auto;
+  }
 }
 
 .footer-container {
@@ -1931,6 +1934,75 @@ textarea {
 .services-offer .section-actions {
   display: flex;
   justify-content: center;
+}
+
+.our-services-container .hero-section {
+  padding: 100px 50px 50px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.our-services-container .hero-section .section-title span {
+  color: #000;
+  font-size: 32px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 140%;
+}
+.our-services-container .hero-section .hover-button-black {
+  margin-top: 16px;
+}
+.our-services-container .hero-section .badgets {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+@media only screen and (max-width: 768px) {
+  .our-services-container .hero-section .badgets {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}
+.our-services-container .hero-section .badgets .badget {
+  padding: 10px 16px;
+  border-radius: 99px;
+  background: #E9E9E9;
+  color: #000;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+}
+@media only screen and (max-width: 768px) {
+  .our-services-container .hero-section {
+    padding: 50px 16px;
+  }
+}
+.our-services-container .how-we-do {
+  padding: 50px 50px 100px 50px;
+  display: flex;
+  gap: 32px;
+}
+.our-services-container .how-we-do .section-intro {
+  width: 50%;
+}
+.our-services-container .how-we-do .section-text {
+  width: 50%;
+}
+@media only screen and (max-width: 768px) {
+  .our-services-container .how-we-do {
+    flex-direction: column;
+    padding: 16px 16px 50px 16px;
+  }
+  .our-services-container .how-we-do .section-intro {
+    width: 100%;
+  }
+  .our-services-container .how-we-do .section-text {
+    width: 100%;
+  }
+}
+.our-services-container .services-offer .section-header {
+  justify-content: space-between;
 }
 
 .test-container {

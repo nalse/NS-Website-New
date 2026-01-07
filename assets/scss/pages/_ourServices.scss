@@ -1,0 +1,87 @@
+@use '../abstracts/mixins' as *;
+
+.our-services-container {
+
+    .hero-section {
+        padding: 100px 50px 50px 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        .section-title {
+            span {
+                color: #000;
+                font-size: 32px;
+                font-style: italic;
+                font-weight: 500;
+                line-height: 140%;
+            }
+        }
+
+        .hover-button-black {
+            margin-top: 16px;
+        }
+
+        .badgets {
+            display: flex;
+            gap: 12px;
+            justify-content: flex-end;
+
+            @include mq(tablet-portrait-up) {
+                justify-content: flex-start;
+                flex-wrap: wrap;
+            }
+
+            .badget {
+                padding: 10px 16px;
+                border-radius: 99px;
+                background: #E9E9E9;
+
+                color: #000;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 120%;
+            }
+        }
+
+        @include mq(tablet-portrait-up) {
+            padding: 50px 16px;
+        }
+    }
+
+    .how-we-do {
+        padding: 50px 50px 100px 50px;
+        display: flex;
+        gap: 32px;
+
+        .section-intro {
+            width: 50%;
+        }
+
+        .section-text {
+            width: 50%;
+        }
+
+        @include mq(tablet-portrait-up) {
+            flex-direction: column;
+            padding: 16px 16px 50px 16px;
+
+            .section-intro {
+                width: 100%;
+            }
+
+            .section-text {
+                width: 100%;
+            }
+        }
+    }
+
+
+    .services-offer {
+        .section-header {
+            justify-content: space-between;
+        }
+    }
+
+}
