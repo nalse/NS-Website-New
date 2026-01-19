@@ -31,7 +31,7 @@
                     <span class="nav-link__inner">About Us</span>
                 </a>
 
-                <a href="ourServices.html" class="nav-link" data-text="Our Services">
+                <a href="ourServices.html" class="nav-link" id="services" data-text="Our Services">
                     <span class="nav-link__inner">Our Services</span>
                 </a>
                 <a href="portfolio.html" class="nav-link" data-text="Case Studies">
@@ -101,7 +101,7 @@
 
                     <div class="offcanvas-actions">
 
-                        <a class="hover-button-black">
+                        <a class="hover-button-white">
                             <span class="circle"></span>
                             <span class="label">Get in Touch</span>
                         </a>
@@ -116,10 +116,46 @@
 
         </header>
 
+        <!-- services dropdown -->
+        <div class="services-dropdown">
+            <div class="dropdown-links">
+
+                <div class="dropdown-link" data-img="assets/imges/dropdown-img.png">
+                    <a href="#" class="link-item">Web Development</a>
+                    <img src="assets/icons/arrow-digonal-right.svg" alt="">
+                </div>
+
+                <div class="dropdown-link" data-img="assets/imges/dropdown-img2.png">
+                    <a href="#" class="link-item">Mobile Development</a>
+                    <img src="assets/icons/arrow-digonal-right.svg" alt="">
+                </div>
+
+                <div class="dropdown-link" data-img="assets/imges/dropdown-img4.png">
+                    <a href="#" class="link-item">Digital Marketing Services (SEO, SMM, SEM)</a>
+                    <img src="assets/icons/arrow-digonal-right.svg" alt="">
+                </div>
+
+                <div class="dropdown-link" data-img="assets/imges/dropdown-img3.png">
+                    <a href="#" class="link-item">UX/UI Design</a>
+                    <img src="assets/icons/arrow-digonal-right.svg" alt="">
+                </div>
+
+                <div class="dropdown-link" data-img="assets/imges/dropdown-img.png">
+                    <a href="#" class="link-item">Graphic Design and Branding</a>
+                    <img src="assets/icons/arrow-digonal-right.svg" alt="">
+                </div>
+
+            </div>
+
+            <div class="dropdown-img-preview">
+                <img src="assets/imges/dropdown-img.png" alt="">
+            </div>
+        </div>
+
         <!-- hero -->
         <div class="hero-image">
             <!-- <img src="assets//imges/portfolio-details-hero.png" alt=""> -->
-             <video src="assets/videos/hero-video.mp4" autoplay muted loop playsinline></video>
+            <video src="assets/videos/hero-video.mp4" autoplay muted loop playsinline></video>
         </div>
 
         <div class="text-section">
@@ -351,6 +387,8 @@
     </div>
 
     <script src="assets/js/button.js"></script>
+    <script src="assets/js/servicesDropdown.js"></script>
+
 </body>
 
 </html>

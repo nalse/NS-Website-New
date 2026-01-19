@@ -82,6 +82,15 @@
     }
 }
 
+.nav-link-services {
+    &:hover {
+        .services-dropdown {
+            display: none !important;
+            background-color: green;
+        }
+    }
+}
+
 .selected-projects {
     padding: 50px;
     display: flex;

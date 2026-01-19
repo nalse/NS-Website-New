@@ -56,6 +56,7 @@
                 }
             }
         }
+
     }
 
     .header-actions {
@@ -73,7 +74,7 @@
                 border-radius: 6px;
                 background: var(--Neutral-colors-Light-Gray-15, rgba(190, 190, 190, 0.15));
 
-                &:focus{
+                &:focus {
                     border: none;
                 }
 
@@ -109,7 +110,7 @@
             display: none;
         }
 
-        .header-actions{
+        .header-actions {
             margin-left: auto;
         }
     }

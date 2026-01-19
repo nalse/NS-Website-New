@@ -31,7 +31,7 @@
                     <span class="nav-link__inner">About Us</span>
                 </a>
 
-                <a href="ourServices.html" class="nav-link" data-text="Our Services">
+                <a href="ourServices.html" class="nav-link" id="services" data-text="Our Services">
                     <span class="nav-link__inner">Our Services</span>
                 </a>
                 <a href="portfolio.html" class="nav-link" data-text="Case Studies">
@@ -116,6 +116,42 @@
 
         </header>
 
+        <!-- services dropdown -->
+        <div class="services-dropdown">
+            <div class="dropdown-links">
+
+                <div class="dropdown-link" data-img="assets/imges/dropdown-img.png">
+                    <a href="#" class="link-item">Web Development</a>
+                    <img src="assets/icons/arrow-digonal-right.svg" alt="">
+                </div>
+
+                <div class="dropdown-link" data-img="assets/imges/dropdown-img2.png">
+                    <a href="#" class="link-item">Mobile Development</a>
+                    <img src="assets/icons/arrow-digonal-right.svg" alt="">
+                </div>
+
+                <div class="dropdown-link" data-img="assets/imges/dropdown-img4.png">
+                    <a href="#" class="link-item">Digital Marketing Services (SEO, SMM, SEM)</a>
+                    <img src="assets/icons/arrow-digonal-right.svg" alt="">
+                </div>
+
+                <div class="dropdown-link" data-img="assets/imges/dropdown-img3.png">
+                    <a href="#" class="link-item">UX/UI Design</a>
+                    <img src="assets/icons/arrow-digonal-right.svg" alt="">
+                </div>
+
+                <div class="dropdown-link" data-img="assets/imges/dropdown-img.png">
+                    <a href="#" class="link-item">Graphic Design and Branding</a>
+                    <img src="assets/icons/arrow-digonal-right.svg" alt="">
+                </div>
+
+            </div>
+
+            <div class="dropdown-img-preview">
+                <img src="assets/imges/dropdown-img.png" alt="">
+            </div>
+        </div>
+
         <!-- hero -->
         <div class="hero-section">
 
@@ -137,18 +173,18 @@
             </div>
 
             <div class="badgets">
-                <div class="badget">
+                <a href="#" class="badget">
                     Website
-                </div>
-                <div class="badget">
+                </a>
+                <a href="#" class="badget">
                     Mobile Applications
-                </div>
-                <div class="badget">
+                </a>
+                <a href="#" class="badget">
                     Branding
-                </div>
-                <div class="badget">
+                </a>
+                <a href="#" class="badget">
                     Social Media Marketing
-                </div>
+                </a>
             </div>
 
         </div>
@@ -453,12 +489,13 @@
                             <span class="info-title">Social Media</span>
 
                             <div class="infos">
-                                <a href="https://www.instagram.com/nsstudio.az/" class="info"><span>Instagram</span><img src="assets/icons/arrow-up-white.svg"
+                                <a href="https://www.instagram.com/nsstudio.az/" class="info"><span>Instagram</span><img
+                                        src="assets/icons/arrow-up-white.svg" alt=""></a>
+                                <a href="https://www.linkedin.com/company/nsstudio-az/posts/?feedView=all"
+                                    class="info"><span>Linkedin</span><img src="assets/icons/arrow-up-white.svg"
                                         alt=""></a>
-                                <a href="https://www.linkedin.com/company/nsstudio-az/posts/?feedView=all" class="info"><span>Linkedin</span><img src="assets/icons/arrow-up-white.svg"
-                                        alt=""></a>
-                                <a href="https://www.facebook.com/nsstudioaz/" class="info"><span>Facebook</span><img src="assets/icons/arrow-up-white.svg"
-                                        alt=""></a>
+                                <a href="https://www.facebook.com/nsstudioaz/" class="info"><span>Facebook</span><img
+                                        src="assets/icons/arrow-up-white.svg" alt=""></a>
                             </div>
                         </div>
 
@@ -490,6 +527,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
         </script>
+    <script src="assets/js/servicesDropdown.js"></script>
+
 </body>
 
 </html>
