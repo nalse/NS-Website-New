@@ -939,10 +939,13 @@ textarea {
 .offcanvas .offcanvas-body .offcanvas-navs .offcanvas-submenu {
   margin-left: 12px;
   padding: 4px 0 8px 12px;
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 6px;
   border-left: 1px solid #e5e5e5;
+}
+.offcanvas .offcanvas-body .offcanvas-navs .nav-item-services.is-open .offcanvas-submenu {
+  display: flex;
 }
 .offcanvas .offcanvas-body .offcanvas-navs .submenu-link {
   color: #5c5c5c;
