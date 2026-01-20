@@ -34,6 +34,24 @@ document.addEventListener('DOMContentLoaded', () => {
     updateToggleState();
   };
 
+  const playWhenReady = (video) => {
+    const playVideo = () => {
+      video.play().catch(() => {});
+    };
+
+    if (video.readyState >= 2) {
+      playVideo();
+      return;
+    }
+
+    const handleCanPlay = () => {
+      playVideo();
+      video.removeEventListener('canplay', handleCanPlay);
+    };
+
+    video.addEventListener('canplay', handleCanPlay);
+  };
+
   const loadVideo = (video) => {
     if (video.dataset.loaded === 'true') return;
     const streamSrc = video.dataset.streamSrc;
@@ -44,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
     video.load();
 
     if (video.autoplay) {
-      video.play().catch(() => {});
+      playWhenReady(video);
     }
   };
 
@@ -57,12 +75,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (entry.isIntersecting) {
           loadVideo(video);
-          video.play().catch(() => {});
-        } else if (!video.paused) {
+          playWhenReady(video);
+        } else if (video.dataset.loaded === 'true' && !video.paused) {
           video.pause();
         }
       });
-    }, { threshold: 0.4 });
+    }, { rootMargin: '200px 0px', threshold: 0.15 });
 
     videos.forEach((video) => observer.observe(video));
   } else {
