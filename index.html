@@ -191,11 +191,26 @@
             </div>
 
             <div class="hero-video-div">
-                <video class="hero-video" data-stream-src="https://iframe.mediadelivery.net/embed/583671/7ae15200-bd57-41f4-a150-4d81ae95702a"
-                    autoplay muted loop playsinline preload="none" poster="https://ns-studio.b-cdn.net/video-cover.jpg">
-                    Sizin browser video tagını dəstəkləmir.
+                <video class="hero-video"
+                       data-stream-src="https://vz-5458ca78-b57.b-cdn.net/7ae15200-bd57-41f4-a150-4d81ae95702a/playlist.m3u8"
+                       autoplay muted loop playsinline preload="none"
+                       poster="https://ns-studio.b-cdn.net/video-cover.jpg">
                 </video>
+                <button
+                        type="button"
+                        class="hero-audio-toggle is-muted"
+                        data-audio-toggle
+                        aria-pressed="false"
+                        aria-label="Unmute audio">
+
+                    <img
+                            src="assets/icons/sound-off.svg"
+                            alt=""
+                            class="audio-icon"
+                            data-icon>
+                </button>
             </div>
+
         </div>
 
         <!-- indicators -->
@@ -1242,6 +1257,7 @@
     <script src="assets/js/swiper.js"></script>
     <script src="assets/js/servicesDropdown.js"></script>
     <script src="assets/js/offcanvasMenu.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     <script src="assets/js/videoStream.js"></script>
 </body>
 

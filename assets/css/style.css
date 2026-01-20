@@ -2212,3 +2212,100 @@ textarea {
   font-size: 14px;
   color: #555;
 }/*# sourceMappingURL=style.css.map */
+
+
+/* ================================
+   VIDEO AUDIO TOGGLE (shared)
+   Works for: .hero-video-div + .hero-image
+================================ */
+
+/* wrappers positioning */
+.hero-video-div,
+.hero-image{
+  position: relative;
+}
+
+/* details page video fit layer (need it only where video is absolute) */
+.hero-image video{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* shared button styles (both class names) */
+.hero-audio-toggle,
+.hero-image .video-audio-toggle{
+  position: absolute;
+  top: 16px;
+  right: 16px;
+
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid rgba(255,255,255,.22);
+  background: rgba(0,0,0,.35);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  cursor: pointer;
+  transition: transform .15s ease, background .15s ease;
+}
+
+/* z-index difference */
+.hero-audio-toggle{ z-index: 5; }
+.hero-image .video-audio-toggle{
+  z-index: 10;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
+/* interactions */
+.hero-audio-toggle:hover,
+.hero-image .video-audio-toggle:hover{ transform: scale(1.05); }
+
+.hero-audio-toggle:active,
+.hero-image .video-audio-toggle:active{ transform: scale(.96); }
+
+.hero-audio-toggle:focus-visible,
+.hero-image .video-audio-toggle:focus-visible{
+  outline: 2px solid rgba(255,255,255,.6);
+  outline-offset: 3px;
+}
+
+/* shared icon */
+.hero-audio-toggle .audio-icon,
+.hero-image .video-audio-toggle .audio-icon{
+  width: 18px;
+  height: 18px;
+  display: block;
+  filter: invert(1);
+}
+
+/* mobile */
+@media (max-width: 576px){
+  .hero-audio-toggle,
+  .hero-image .video-audio-toggle{
+    top: 12px;
+    right: 12px;
+    width: 36px;
+    height: 36px;
+  }
+
+  .hero-audio-toggle .audio-icon,
+  .hero-image .video-audio-toggle .audio-icon{
+    width: 16px;
+    height: 16px;
+  }
+}
+
+
+
+
