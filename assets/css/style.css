@@ -943,10 +943,22 @@ textarea {
   flex-direction: column;
   gap: 6px;
   border-left: 1px solid #e5e5e5;
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-6px);
+  overflow: hidden;
+  pointer-events: none;
+  transition: max-height 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
+}
+.offcanvas .offcanvas-body .offcanvas-navs .nav-item-services.is-open .offcanvas-submenu {
+  max-height: 220px;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 .offcanvas .offcanvas-body .offcanvas-navs .submenu-link {
   color: #5c5c5c;
-  font-size: 12px;
+  font-size: 13px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
