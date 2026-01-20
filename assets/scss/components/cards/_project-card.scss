@@ -27,7 +27,8 @@
             padding: 12px;
             backdrop-filter: blur(25px);
             fill: rgba(199, 225, 192, 0.81);
-            background-image: linear-gradient(to right, #000 0%, #000 45%, #F5429DC4 100%);
+            // background-image: linear-gradient(to right, #000 0%, #000 45%, #F5429DC4 100%);
+            background-image: linear-gradient(to right, #60adac 0%, #ac5a7e 45%, #bdd9b4 100%);
             opacity: 0;
             transition: all .5s ease-in;
             z-index: 9;

@@ -582,7 +582,7 @@ textarea {
   -webkit-backdrop-filter: blur(25px);
           backdrop-filter: blur(25px);
   fill: rgba(199, 225, 192, 0.81);
-  background-image: linear-gradient(to right, #000 0%, #000 45%, rgba(245, 66, 157, 0.768627451) 100%);
+  background-image: linear-gradient(to right, #60adac 0%, #ac5a7e 45%, #bdd9b4 100%);
   opacity: 0;
   transition: all 0.5s ease-in;
   z-index: 9;
