@@ -31,3 +31,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initial aria
   servicesLink.setAttribute('aria-expanded', servicesItem.classList.contains('is-open') ? 'true' : 'false');
 });
+
+
+document.querySelectorAll('#langMenu .dropdown-item').forEach(item => {
+  item.addEventListener('click', () => {
+    document.querySelectorAll('#langMenu .dropdown-item')
+        .forEach(i => i.classList.remove('active'));
+    item.classList.add('active');
+  });
+});

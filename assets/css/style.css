@@ -131,6 +131,84 @@ textarea {
   display: inline-block;
 }
 
+/* ================================
+   Language dropdown – enhanced UX
+================================ */
+
+#langDropdown .dropdown-menu{
+  min-width: unset !important;
+  width: max-content !important;
+  padding: 6px;
+  border-radius: 10px;
+  border: 1px solid #E6E6E6;
+  box-shadow: 0 8px 24px rgba(0,0,0,.08);
+}
+
+/* dropdown item base */
+#langDropdown .dropdown-item{
+  position: relative;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+  transition:
+          background .2s ease,
+          transform .15s ease,
+          color .2s ease;
+  cursor: pointer;
+}
+
+/* hover effect */
+#langDropdown .dropdown-item:hover{
+  background: rgba(83,165,166,.12); /* NS rənginə yaxın */
+  color: #000;
+  transform: translateX(2px);
+}
+
+/* active / selected language */
+#langDropdown .dropdown-item.active,
+#langDropdown .dropdown-item:active{
+  background: linear-gradient(
+          96deg,
+          rgba(96,173,172,.25),
+          rgba(172,90,126,.25),
+          rgba(189,217,180,.25)
+  );
+  color: #000;
+  font-weight: 600;
+}
+
+/* subtle left indicator on hover */
+#langDropdown .dropdown-item::before{
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 50%;
+  transform: translateY(-50%) scaleY(0);
+  width: 3px;
+  height: 60%;
+  border-radius: 2px;
+  background: #53A5A6;
+  transition: transform .2s ease;
+}
+
+#langDropdown .dropdown-item:hover::before{
+  transform: translateY(-50%) scaleY(1);
+}
+
+#langDropdown .dropdown-item.active{
+  background: linear-gradient(
+          96deg,
+          rgba(96,173,172,.25),
+          rgba(172,90,126,.25),
+          rgba(189,217,180,.25)
+  );
+  font-weight: 600;
+}
+
+
+
 @media only screen and (max-width: 1024px) {
   .header-container {
     padding: 12px;
@@ -1036,6 +1114,87 @@ textarea {
   width: 100%;
   height: 100%;
 }
+
+.partner-card{
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  cursor: pointer;
+
+  transition:
+          transform .45s cubic-bezier(.2,.9,.25,1),
+          box-shadow .45s ease;
+}
+
+
+.partner-card::before{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  border-radius: 14px;
+  background: linear-gradient(96deg,#60adac -1.27%, #ac5a7e 48%, #bdd9b4 99.19%);
+  opacity: 0;
+  filter: blur(18px);
+  transform: scale(.98);
+  transition: opacity .45s ease, transform .45s ease;
+  z-index: 0;
+}
+
+.partner-card > *{
+  position: relative;
+  z-index: 2;
+}
+
+.partner-card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 22px 60px rgba(0,0,0,.12);
+}
+
+.partner-card:hover::before{
+  opacity: .55;
+  transform: scale(1);
+}
+
+.partner-card .partner-img{
+  position: relative;
+  z-index: 3;
+
+  background: transparent;
+  border-radius: 10px;
+  padding: 6px 10px;
+
+  transition:
+          background .35s ease,
+          box-shadow .35s ease,
+          backdrop-filter .35s ease,
+          -webkit-backdrop-filter .35s ease,
+          transform .35s ease;
+}
+
+.partner-card:hover .partner-img{
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  box-shadow: 0 10px 26px rgba(0,0,0,.14);
+  transform: scale(1.03);
+}
+
+.partner-card .partner-img img{
+  transition:
+          transform .35s ease,
+          filter .35s ease,
+          opacity .35s ease;
+
+  filter: grayscale(100%);
+  opacity: .82;
+}
+
+.partner-card:hover .partner-img img{
+  filter: grayscale(0%) saturate(1.12) contrast(1.05);
+  opacity: 1;
+  transform: scale(1.04);
+}
+
 
 .input-with-label {
   display: flex;
