@@ -67,6 +67,15 @@
 
         @include mq(tablet-portrait-up) {
             padding: 50px 16px;
+            flex-direction: column;
+
+            .hero-intro{
+                width: 100%;
+            }
+
+            .hero-image{
+                width: 100%;
+            }
         }
     }
 

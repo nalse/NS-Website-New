@@ -2054,6 +2054,13 @@ textarea {
 @media only screen and (max-width: 768px) {
   .our-services-container .hero-section {
     padding: 50px 16px;
+    flex-direction: column;
+  }
+  .our-services-container .hero-section .hero-intro {
+    width: 100%;
+  }
+  .our-services-container .hero-section .hero-image {
+    width: 100%;
   }
 }
 .our-services-container .how-we-do {
