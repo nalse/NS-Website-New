@@ -59,10 +59,16 @@
             .offcanvas-submenu {
                 margin-left: 12px;
                 padding: 4px 0 8px 12px;
-                display: flex;
+                display: none;
                 flex-direction: column;
                 gap: 6px;
                 border-left: 1px solid #e5e5e5;
+            }
+
+            .nav-item-services.is-open {
+                .offcanvas-submenu {
+                    display: flex;
+                }
             }
 
             .submenu-link {
