@@ -1,0 +1,25 @@
+@use '../../abstracts/mixins' as *;
+
+.badgets {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    margin-top: 16px;
+
+    @include mq(tablet-portrait-up) {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .badget {
+        padding: 10px 16px;
+        border-radius: 99px;
+        background: #E9E9E9;
+
+        color: #000;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+    }
+}

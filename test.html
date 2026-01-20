@@ -8,11 +8,35 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
+<style>
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .grid-item {
+    background: #111;
+    color: #fff;
+    padding: 16px;
+    border-radius: 8px;
+  }
+
+  .grid-item:nth-child(n + 3) {
+    grid-column: 1 / -1;
+  }
+</style>
+
 <body>
 
   <div class="test-container">
 
-    <div class="posts">
+    <div class="grid">
+      <div class="grid-item">1</div>
+      <div class="grid-item">2</div>
+      <div class="grid-item">3</div>
+      <div class="grid-item">4</div>
+      <div class="grid-item">5</div>
     </div>
 
   </div>
