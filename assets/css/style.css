@@ -1608,12 +1608,50 @@ textarea {
 
 .portfolio-details-container .hero-image {
   height: 700px;
+  position: relative;
 }
 .portfolio-details-container .hero-image video {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
   height: 700px;
+}
+.portfolio-details-container .hero-image .video-audio-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+.portfolio-details-container .hero-image .video-audio-toggle .audio-icon {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+.portfolio-details-container .hero-image.video-started .video-audio-toggle {
+  opacity: 1;
+  pointer-events: auto;
+}
+.portfolio-details-container .hero-image .video-audio-toggle.is-muted .audio-icon {
+  opacity: 0.7;
+}
+@media only screen and (max-width: 768px) {
+  .portfolio-details-container .hero-image .video-audio-toggle {
+    top: 12px;
+    right: 12px;
+    width: 36px;
+    height: 36px;
+  }
 }
 .portfolio-details-container .text-section {
   display: flex;
