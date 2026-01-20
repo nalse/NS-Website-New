@@ -32,6 +32,9 @@
         justify-content: space-between;
 
         .offcanvas-navs {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
 
             .nav-link {
                 padding: 12px;
@@ -46,6 +49,33 @@
                     font-weight: 500;
                     line-height: normal;
                 }
+            }
+
+            .nav-item-services {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .offcanvas-submenu {
+                margin-left: 12px;
+                padding: 4px 0 8px 12px;
+                display: flex;
+                flex-direction: column;
+                gap: 6px;
+                border-left: 1px solid #e5e5e5;
+            }
+
+            .submenu-link {
+                color: #5c5c5c;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                text-decoration: none;
+            }
+
+            .submenu-link:hover {
+                color: #000;
             }
         }
 

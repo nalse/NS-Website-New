@@ -914,6 +914,11 @@ textarea {
   flex-direction: column;
   justify-content: space-between;
 }
+.offcanvas .offcanvas-body .offcanvas-navs {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
 .offcanvas .offcanvas-body .offcanvas-navs .nav-link {
   padding: 12px;
   display: flex;
@@ -926,6 +931,29 @@ textarea {
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+}
+.offcanvas .offcanvas-body .offcanvas-navs .nav-item-services {
+  display: flex;
+  flex-direction: column;
+}
+.offcanvas .offcanvas-body .offcanvas-navs .offcanvas-submenu {
+  margin-left: 12px;
+  padding: 4px 0 8px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-left: 1px solid #e5e5e5;
+}
+.offcanvas .offcanvas-body .offcanvas-navs .submenu-link {
+  color: #5c5c5c;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration: none;
+}
+.offcanvas .offcanvas-body .offcanvas-navs .submenu-link:hover {
+  color: #000;
 }
 .offcanvas .offcanvas-body .offcanvas-actions {
   display: flex;
