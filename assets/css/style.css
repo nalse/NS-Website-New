@@ -123,6 +123,14 @@ textarea {
 .header-container .header-actions .btn-group .dropdown-menu .dropdown-item:hover {
   background-color: transparent;
 }
+
+.select-language img{
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  display: inline-block;
+}
+
 @media only screen and (max-width: 1024px) {
   .header-container {
     padding: 12px;
@@ -939,7 +947,7 @@ textarea {
 .offcanvas .offcanvas-body .offcanvas-navs .offcanvas-submenu {
   margin-left: 12px;
   padding: 4px 0 8px 12px;
-  display: none;
+  display: flex;
   flex-direction: column;
   gap: 6px;
   border-left: 1px solid #e5e5e5;
@@ -950,6 +958,17 @@ textarea {
   pointer-events: none;
   transition: max-height 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
 }
+
+.offcanvas .offcanvas-body .offcanvas-navs .nav-item-services > .nav-link img{
+  transition: transform .2s ease;
+  transform: rotate(0deg);
+}
+
+.offcanvas .offcanvas-body .offcanvas-navs .nav-item-services.is-open > .nav-link img{
+  transform: rotate(180deg);
+}
+
+
 .offcanvas .offcanvas-body .offcanvas-navs .nav-item-services.is-open .offcanvas-submenu {
   max-height: 220px;
   opacity: 1;
@@ -983,6 +1002,18 @@ textarea {
   line-height: normal;
   padding: 12px;
   text-decoration: none;
+}
+
+.offcanvas .offcanvas-body .offcanvas-navs .offcanvas-submenu{
+  padding: 0 !important;
+  margin: 0 !important;
+  border-left: 0 !important;
+}
+
+.offcanvas .offcanvas-body .offcanvas-navs .nav-item-services.is-open .offcanvas-submenu{
+  padding: 4px 0 8px 12px !important;
+  margin-left: 12px !important;
+  border-left: 1px solid #e5e5e5 !important;
 }
 
 .partner-card {

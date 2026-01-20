@@ -2,6 +2,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const videos = document.querySelectorAll('video[data-stream-src]');
   if (!videos.length) return;
 
+  const pickStreamSrc = (video) => {
+    const mobileSrc = video.dataset.streamSrcMobile;
+    const desktopSrc = video.dataset.streamSrc;
+
+    const isMobile =
+        window.matchMedia('(max-width: 768px)').matches ||
+        /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+    return (isMobile && mobileSrc) ? mobileSrc : desktopSrc;
+  };
+
+
   const getWrap = (video) => video.closest('.hero-video-div') || video.parentElement;
 
   const updateAudioIcon = (video) => {
@@ -94,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const loadVideo = (video) => {
     if (video.dataset.loaded === 'true') return;
 
-    const src = video.dataset.streamSrc;
+    const src = pickStreamSrc(video);
     if (!src) return;
 
     // Autoplay policy safety
