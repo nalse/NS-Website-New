@@ -956,9 +956,6 @@ textarea {
   transform: translateY(0);
   pointer-events: auto;
 }
-.offcanvas .offcanvas-body .offcanvas-navs .nav-item-services.is-open .offcanvas-submenu {
-  display: flex;
-}
 .offcanvas .offcanvas-body .offcanvas-navs .submenu-link {
   color: #5c5c5c;
   font-size: 13px;
