@@ -5,45 +5,65 @@
     .hero-section {
         padding: 100px 50px 50px 50px;
         display: flex;
-        flex-direction: column;
+        align-items: center;
         gap: 16px;
 
-        .section-title {
-            span {
-                color: #000;
-                font-size: 32px;
-                font-style: italic;
-                font-weight: 500;
-                line-height: 140%;
-            }
-        }
-
-        .hover-button-black {
-            margin-top: 16px;
-        }
-
-        .badgets {
+        .hero-intro {
             display: flex;
-            gap: 12px;
-            justify-content: flex-end;
+            flex-direction: column;
+            gap: 16px;
+            width: 50%;
 
-            @include mq(tablet-portrait-up) {
-                justify-content: flex-start;
-                flex-wrap: wrap;
+            .section-title {
+                span {
+                    color: #000;
+                    font-size: 32px;
+                    font-style: italic;
+                    font-weight: 500;
+                    line-height: 140%;
+                }
             }
 
-            .badget {
-                padding: 10px 16px;
-                border-radius: 99px;
-                background: #E9E9E9;
+            .hover-button-black {
+                margin-top: 16px;
+            }
 
-                color: #000;
-                font-size: 12px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: 120%;
+            .badgets {
+                display: flex;
+                gap: 12px;
+                justify-content: flex-end;
+
+                @include mq(tablet-portrait-up) {
+                    justify-content: flex-start;
+                    flex-wrap: wrap;
+                }
+
+                .badget {
+                    padding: 10px 16px;
+                    border-radius: 99px;
+                    background: #E9E9E9;
+
+                    color: #000;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 120%;
+                }
+            }
+
+        }
+
+        .hero-image{
+            width: 50%;
+            max-height: 400px;
+
+            img{
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
             }
         }
+
 
         @include mq(tablet-portrait-up) {
             padding: 50px 16px;
@@ -77,6 +97,11 @@
                     }
                 }
             }
+        }
+
+        .a {
+            font-size: 24px;
+            font-weight: 500;
         }
 
         .section-text {

@@ -2001,31 +2001,37 @@ textarea {
 .our-services-container .hero-section {
   padding: 100px 50px 50px 50px;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   gap: 16px;
 }
-.our-services-container .hero-section .section-title span {
+.our-services-container .hero-section .hero-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 50%;
+}
+.our-services-container .hero-section .hero-intro .section-title span {
   color: #000;
   font-size: 32px;
   font-style: italic;
   font-weight: 500;
   line-height: 140%;
 }
-.our-services-container .hero-section .hover-button-black {
+.our-services-container .hero-section .hero-intro .hover-button-black {
   margin-top: 16px;
 }
-.our-services-container .hero-section .badgets {
+.our-services-container .hero-section .hero-intro .badgets {
   display: flex;
   gap: 12px;
   justify-content: flex-end;
 }
 @media only screen and (max-width: 768px) {
-  .our-services-container .hero-section .badgets {
+  .our-services-container .hero-section .hero-intro .badgets {
     justify-content: flex-start;
     flex-wrap: wrap;
   }
 }
-.our-services-container .hero-section .badgets .badget {
+.our-services-container .hero-section .hero-intro .badgets .badget {
   padding: 10px 16px;
   border-radius: 99px;
   background: #E9E9E9;
@@ -2034,6 +2040,16 @@ textarea {
   font-style: normal;
   font-weight: 500;
   line-height: 120%;
+}
+.our-services-container .hero-section .hero-image {
+  width: 50%;
+  max-height: 400px;
+}
+.our-services-container .hero-section .hero-image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 @media only screen and (max-width: 768px) {
   .our-services-container .hero-section {
@@ -2064,6 +2080,10 @@ textarea {
 }
 .our-services-container .how-we-do .section-intro .section-form .form-grid-item:nth-child(n+3) {
   grid-column: 1/-1;
+}
+.our-services-container .how-we-do .a {
+  font-size: 24px;
+  font-weight: 500;
 }
 .our-services-container .how-we-do .section-text {
   width: 50%;
